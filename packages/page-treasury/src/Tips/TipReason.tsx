@@ -1,0 +1,32 @@
+// Copyright 2017-2021 @axia-js/app-treasury authors & contributors
+// SPDX-License-Identifier: Apache-2.0
+
+import type { Bytes, Option } from '@axia-js/types';
+import type { Hash } from '@axia-js/types/interfaces';
+
+import React from 'react';
+
+import { useApi, useCall } from '@axia-js/react-hooks';
+import { hexToString } from '@axia-js/util';
+
+interface Props {
+  hash: Hash;
+}
+
+const transformTip = {
+  transform: (optBytes: Option<Bytes>) =>
+    optBytes.isSome
+      ? hexToString(optBytes.unwrap().toHex())
+      : null
+};
+
+function TipReason ({ hash }: Props): React.ReactElement<Props> {
+  const { api } = useApi();
+  const reasonText = useCall<string | null>((api.query.tips || api.query.treasury).reasons, [hash], transformTip);
+
+  return (
+    <td className='start all'>{reasonText || hash.toHex()}</td>
+  );
+}
+
+export default React.memo(TipReason);

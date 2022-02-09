@@ -1,0 +1,25 @@
+{
+ 
+  "lightclient.experimental": "light client (experimental)",
+  "lng.detect": "Default browser language (auto-detect)",
+  
+  "rpc.axia.axia": "AXIA",
+  
+  "rpc.dev.custom": "Custom environment",
+  "rpc.dev.custom.entry": "Custom {{WS_URL}}",
+  "rpc.dev.custom.own": "Custom WS",
+  "rpc.dev.local": "Local WS",
+  
+  "rpc.header.dev": "Plug & Play",
+  "rpc.header.live": "AllyChains",
+  "rpc.header.test": "Test Networks",
+  "rpc.hosted.by": "hosted by {{host}}",
+  "rpc.hosted.via": "via {{host}}",
+
+
+  "rpc.prod.chainx": "ChainX",
+  "rpc.prod.axccanarynet" : "CanaryNet",
+
+  "rpc.test.pontem": "Pontem",
+  "rpc.test.axctestnet": "ZeeveTestNet",
+}

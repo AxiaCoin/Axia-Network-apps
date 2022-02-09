@@ -1,0 +1,14 @@
+{
+  "name": "@axia-js/app-settings",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/apps-config": "0.1.0",
+    "@axia-js/react-components": "0.1.0",
+    "@axia-js/react-query": "0.1.0",
+    "@babel/runtime": "^7.15.4",
+    "query-string": "^7.0.1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@axia-js/app-contracts",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@axia-js/api-contract": "0.1.0",
+    "@babel/runtime": "^7.15.4"
+  }
+}
