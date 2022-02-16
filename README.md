@@ -1,6 +1,3 @@
-Axia Network Apps
-
-```
+git clone this url
 yarn install 
 yarn start
-```

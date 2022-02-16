@@ -13,9 +13,9 @@ export default {
     BetaNet: 'betanet'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://axcscan.io/${chain}/${path}/${data.toString()}`,
+    `https://axiascan.io/${chain}/${path}/${data.toString()}`,
   isActive: true,
-  logo: externalLogos.axcscan as string,
+  logo: externalLogos.axiascan as string,
   paths: {
     address: 'account',
     block: 'block',
@@ -26,5 +26,5 @@ export default {
     techcomm: 'techcomm/proposal',
     treasury: 'treasury/proposal'
   },
-  url: 'https://axcscan.io/'
+  url: 'https://axiascan.io/'
 };

@@ -2506,7 +2506,7 @@ __metadata:
   resolution: "@crustio/crust-pin@npm:1.0.0"
   dependencies:
     "@crustio/type-definitions": ^1.2.0
-    "@axcaxc/api": ^4.2.1
+    "@axiaaxc/api": ^4.2.1
   checksum: 3450f436b51e1b920371827cdf0677b663e3487a227e7e8748abaf6dd558fb9a87fc0661b6f559321c2abc82069415d7e2f9ded9cc3c52754add224612d38556
   languageName: node
   linkType: hard
@@ -2534,8 +2534,8 @@ __metadata:
   resolution: "@darwinia/types-known@npm:1.3.0"
   dependencies:
     "@babel/runtime": ^7.9.6
-    "@axcaxc/types": 4.0.4-5
-    "@axcaxc/util": 6.0.5
+    "@axiaaxc/types": 4.0.4-5
+    "@axiaaxc/util": 6.0.5
     bn.js: ^5.1.2
   checksum: 7739b9725a188a54d1ecf168cfd0f5fcf5c35002e880410de078cbbb1d8cab9b707bb3c29b291609ae959c638cbfe106c23995f0dfd527a1979011076c0c8d09
   languageName: node
@@ -2564,8 +2564,8 @@ __metadata:
   version: 1.1.26
   resolution: "@digitalnative/type-definitions@npm:1.1.26"
   dependencies:
-    "@axcaxc/keyring": ^6.9.1
-    "@axcaxc/types": ^4.13.1
+    "@axiaaxc/keyring": ^6.9.1
+    "@axiaaxc/types": ^4.13.1
   checksum: 1a5dede147506c887e2be03e6a9ba6e5e3f4c790b460cd0979e2a8d3dc4ac3e90aa420b44aea0ffb3ad4f71849890d1248630d50c38bfc208a0990b99822d19e
   languageName: node
   linkType: hard
@@ -3563,7 +3563,7 @@ __metadata:
   version: 0.2.28
   resolution: "@phala/typedefs@npm:0.2.28"
   dependencies:
-    "@axcaxc/types": ^5.7.1
+    "@axiaaxc/types": ^5.7.1
   checksum: 1d9f84a70510cad14cae68aaaf4a2fa01a8ff0dd1c42115658d6ed98d3694a4c28d9b26134497fe2d7d183e6981a194267f029e6cbfc17703cfb8c04caa8211e
   languageName: node
   linkType: hard
@@ -3581,317 +3581,317 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@axcaxc/api-derive@npm:4.17.1":
+"@axiaaxc/api-derive@npm:4.17.1":
   version: 4.17.1
-  resolution: "@axcaxc/api-derive@npm:4.17.1"
+  resolution: "@axiaaxc/api-derive@npm:4.17.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/api": 4.17.1
-    "@axcaxc/rpc-core": 4.17.1
-    "@axcaxc/types": 4.17.1
-    "@axcaxc/util": ^6.11.1
-    "@axcaxc/util-crypto": ^6.11.1
-    "@axcaxc/x-rxjs": ^6.11.1
+    "@axiaaxc/api": 4.17.1
+    "@axiaaxc/rpc-core": 4.17.1
+    "@axiaaxc/types": 4.17.1
+    "@axiaaxc/util": ^6.11.1
+    "@axiaaxc/util-crypto": ^6.11.1
+    "@axiaaxc/x-rxjs": ^6.11.1
   checksum: 87778d9a35c80cc9fe6fa8b04ba52d046d93bf043d3f4e36bb31442d75a5526652aa2a35b985fe41f29bf832d30e07a1413255a8b19822631b4b466355dd2b6a
   languageName: node
   linkType: hard
 
-"@axcaxc/api-derive@npm:5.9.1":
+"@axiaaxc/api-derive@npm:5.9.1":
   version: 5.9.1
-  resolution: "@axcaxc/api-derive@npm:5.9.1"
+  resolution: "@axiaaxc/api-derive@npm:5.9.1"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@axcaxc/api": 5.9.1
-    "@axcaxc/rpc-core": 5.9.1
-    "@axcaxc/types": 5.9.1
-    "@axcaxc/util": ^7.3.1
-    "@axcaxc/util-crypto": ^7.3.1
+    "@axiaaxc/api": 5.9.1
+    "@axiaaxc/rpc-core": 5.9.1
+    "@axiaaxc/types": 5.9.1
+    "@axiaaxc/util": ^7.3.1
+    "@axiaaxc/util-crypto": ^7.3.1
     rxjs: ^7.3.0
   checksum: eea9c85e66573aa797acd1bd92e029c77d1abdd5c6d89d816d646e3e7ede42b26d5aa5eb46eb8668789391456a9f4269468d5aaec0838b82fa01c980b8b9ad02
   languageName: node
   linkType: hard
 
-"@axcaxc/api@npm:4.17.1, @axcaxc/api@npm:^4.2.1":
+"@axiaaxc/api@npm:4.17.1, @axiaaxc/api@npm:^4.2.1":
   version: 4.17.1
-  resolution: "@axcaxc/api@npm:4.17.1"
+  resolution: "@axiaaxc/api@npm:4.17.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/api-derive": 4.17.1
-    "@axcaxc/keyring": ^6.11.1
-    "@axcaxc/metadata": 4.17.1
-    "@axcaxc/rpc-core": 4.17.1
-    "@axcaxc/rpc-provider": 4.17.1
-    "@axcaxc/types": 4.17.1
-    "@axcaxc/types-known": 4.17.1
-    "@axcaxc/util": ^6.11.1
-    "@axcaxc/util-crypto": ^6.11.1
-    "@axcaxc/x-rxjs": ^6.11.1
+    "@axiaaxc/api-derive": 4.17.1
+    "@axiaaxc/keyring": ^6.11.1
+    "@axiaaxc/metadata": 4.17.1
+    "@axiaaxc/rpc-core": 4.17.1
+    "@axiaaxc/rpc-provider": 4.17.1
+    "@axiaaxc/types": 4.17.1
+    "@axiaaxc/types-known": 4.17.1
+    "@axiaaxc/util": ^6.11.1
+    "@axiaaxc/util-crypto": ^6.11.1
+    "@axiaaxc/x-rxjs": ^6.11.1
     eventemitter3: ^4.0.7
   checksum: 289070a5d2b89a2e5a731c8a55e10163e554cdec95b02ab6a0bc11491c60f8c3b5c89bfcd28ac02d76f471605dc12abb2f9cf2605b21368a0628d3e4f10d4a06
   languageName: node
   linkType: hard
 
-"@axcaxc/api@npm:5.9.1, @axcaxc/api@npm:^5.8.3":
+"@axiaaxc/api@npm:5.9.1, @axiaaxc/api@npm:^5.8.3":
   version: 5.9.1
-  resolution: "@axcaxc/api@npm:5.9.1"
+  resolution: "@axiaaxc/api@npm:5.9.1"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@axcaxc/api-derive": 5.9.1
-    "@axcaxc/keyring": ^7.3.1
-    "@axcaxc/rpc-core": 5.9.1
-    "@axcaxc/rpc-provider": 5.9.1
-    "@axcaxc/types": 5.9.1
-    "@axcaxc/types-known": 5.9.1
-    "@axcaxc/util": ^7.3.1
-    "@axcaxc/util-crypto": ^7.3.1
+    "@axiaaxc/api-derive": 5.9.1
+    "@axiaaxc/keyring": ^7.3.1
+    "@axiaaxc/rpc-core": 5.9.1
+    "@axiaaxc/rpc-provider": 5.9.1
+    "@axiaaxc/types": 5.9.1
+    "@axiaaxc/types-known": 5.9.1
+    "@axiaaxc/util": ^7.3.1
+    "@axiaaxc/util-crypto": ^7.3.1
     eventemitter3: ^4.0.7
     rxjs: ^7.3.0
   checksum: bb9635ed4139352cb8852efd5762af167d2fa73ac4b2c1d03ee762c616616ec2a0263d5bcc5266eef35f039a29235a92e928aa6e8e08ca2b8198c865ecdd49d4
   languageName: node
   linkType: hard
 
-"@axcaxc/keyring@npm:^6.11.1, @axcaxc/keyring@npm:^6.9.1":
+"@axiaaxc/keyring@npm:^6.11.1, @axiaaxc/keyring@npm:^6.9.1":
   version: 6.11.1
-  resolution: "@axcaxc/keyring@npm:6.11.1"
+  resolution: "@axiaaxc/keyring@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/util": 6.11.1
-    "@axcaxc/util-crypto": 6.11.1
+    "@axiaaxc/util": 6.11.1
+    "@axiaaxc/util-crypto": 6.11.1
   peerDependencies:
-    "@axcaxc/util": 6.11.1
-    "@axcaxc/util-crypto": 6.11.1
+    "@axiaaxc/util": 6.11.1
+    "@axiaaxc/util-crypto": 6.11.1
   checksum: 16c0352697380f60ef4bcd72949dbf8d63057ad0c9f24a5de24b788d40d16f0fb00b7fe9b455addcdb113480a499af4b322fded6b4db1be185321650110a31f2
   languageName: node
   linkType: hard
 
-"@axcaxc/keyring@npm:^7.1.1, @axcaxc/keyring@npm:^7.3.1":
+"@axiaaxc/keyring@npm:^7.1.1, @axiaaxc/keyring@npm:^7.3.1":
   version: 7.8.2
-  resolution: "@axcaxc/keyring@npm:7.8.2"
+  resolution: "@axiaaxc/keyring@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
-    "@axcaxc/util": 7.8.2
-    "@axcaxc/util-crypto": 7.8.2
+    "@axiaaxc/util": 7.8.2
+    "@axiaaxc/util-crypto": 7.8.2
   peerDependencies:
-    "@axcaxc/util": 7.8.2
-    "@axcaxc/util-crypto": 7.8.2
+    "@axiaaxc/util": 7.8.2
+    "@axiaaxc/util-crypto": 7.8.2
   checksum: 9c35be4bebd2930f57a6379cd4dd369b141f843b57b750ebaaa88e4f3e301b906aeb99097cda1bc3147883be554f8e9ed9dd05ecd1487027a0857d141b4a84bf
   languageName: node
   linkType: hard
 
-"@axcaxc/metadata@npm:4.0.4-5":
+"@axiaaxc/metadata@npm:4.0.4-5":
   version: 4.0.4-5
-  resolution: "@axcaxc/metadata@npm:4.0.4-5"
+  resolution: "@axiaaxc/metadata@npm:4.0.4-5"
   dependencies:
     "@babel/runtime": ^7.13.9
-    "@axcaxc/types": 4.0.4-5
-    "@axcaxc/types-known": 4.0.4-5
-    "@axcaxc/util": ^6.0.5
-    "@axcaxc/util-crypto": ^6.0.5
+    "@axiaaxc/types": 4.0.4-5
+    "@axiaaxc/types-known": 4.0.4-5
+    "@axiaaxc/util": ^6.0.5
+    "@axiaaxc/util-crypto": ^6.0.5
     bn.js: ^4.11.9
   checksum: 8fb22ce95bdef1c3ee6624e67969dfd3b257845cc809dc703699b08b8a5d306019321dd59462122c0c677b69ad9edf0b68af17acf8bcaa59ac94ed3e1dd8fb63
   languageName: node
   linkType: hard
 
-"@axcaxc/metadata@npm:4.17.1":
+"@axiaaxc/metadata@npm:4.17.1":
   version: 4.17.1
-  resolution: "@axcaxc/metadata@npm:4.17.1"
+  resolution: "@axiaaxc/metadata@npm:4.17.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/types": 4.17.1
-    "@axcaxc/types-known": 4.17.1
-    "@axcaxc/util": ^6.11.1
-    "@axcaxc/util-crypto": ^6.11.1
+    "@axiaaxc/types": 4.17.1
+    "@axiaaxc/types-known": 4.17.1
+    "@axiaaxc/util": ^6.11.1
+    "@axiaaxc/util-crypto": ^6.11.1
   checksum: 7ffc9b4794de533e34cb82ee8105feabf4bb6820469c0eb7e57e0f90ec3ecdb43436504f687b340721ff68c51a33c6894bdf6c1e55c181332bfc89cbfe338d2e
   languageName: node
   linkType: hard
 
-"@axcaxc/networks@npm:6.11.1, @axcaxc/networks@npm:^6.0.5, @axcaxc/networks@npm:^6.11.1":
+"@axiaaxc/networks@npm:6.11.1, @axiaaxc/networks@npm:^6.0.5, @axiaaxc/networks@npm:^6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/networks@npm:6.11.1"
+  resolution: "@axiaaxc/networks@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
   checksum: 33ec4d0b8dc97a79ba0ec244fcecf20b0b72a2d6c61e8099da6da2ee7e6ff8ea336791b45191f10dd07ffdae7fde46e0292e77a0514c671bf28618e7a5e0fd5e
   languageName: node
   linkType: hard
 
-"@axcaxc/networks@npm:7.8.2, @axcaxc/networks@npm:^7.3.1, @axcaxc/networks@npm:^7.4.1":
+"@axiaaxc/networks@npm:7.8.2, @axiaaxc/networks@npm:^7.3.1, @axiaaxc/networks@npm:^7.4.1":
   version: 7.8.2
-  resolution: "@axcaxc/networks@npm:7.8.2"
+  resolution: "@axiaaxc/networks@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
   checksum: e94cc7a4f0767273a3efef07bde941296b730e8364545b92e01a3b6b627d54ed02d4f4ef7798e43ffd192a2e5a0d116cc7e35d5ccca42a888caa190d51c56b8a
   languageName: node
   linkType: hard
 
-"@axcaxc/rpc-core@npm:4.17.1":
+"@axiaaxc/rpc-core@npm:4.17.1":
   version: 4.17.1
-  resolution: "@axcaxc/rpc-core@npm:4.17.1"
+  resolution: "@axiaaxc/rpc-core@npm:4.17.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/metadata": 4.17.1
-    "@axcaxc/rpc-provider": 4.17.1
-    "@axcaxc/types": 4.17.1
-    "@axcaxc/util": ^6.11.1
-    "@axcaxc/x-rxjs": ^6.11.1
+    "@axiaaxc/metadata": 4.17.1
+    "@axiaaxc/rpc-provider": 4.17.1
+    "@axiaaxc/types": 4.17.1
+    "@axiaaxc/util": ^6.11.1
+    "@axiaaxc/x-rxjs": ^6.11.1
   checksum: e93af9b39f092c08080f140bc64bdaa9393cfcf2cf21a2664419b1badcb42c3260a094918c7ad670ebc1796a178baf036c426997f3ae861941b0a6ce766e4f39
   languageName: node
   linkType: hard
 
-"@axcaxc/rpc-core@npm:5.9.1":
+"@axiaaxc/rpc-core@npm:5.9.1":
   version: 5.9.1
-  resolution: "@axcaxc/rpc-core@npm:5.9.1"
+  resolution: "@axiaaxc/rpc-core@npm:5.9.1"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@axcaxc/rpc-provider": 5.9.1
-    "@axcaxc/types": 5.9.1
-    "@axcaxc/util": ^7.3.1
+    "@axiaaxc/rpc-provider": 5.9.1
+    "@axiaaxc/types": 5.9.1
+    "@axiaaxc/util": ^7.3.1
     rxjs: ^7.3.0
   checksum: 0dfecb6a6129b5b568b5fee35a1922c9926d0cfe592bc11a929d46b3faa2ff8cc84878dcbbbb495b65527dcb64213d2b6f9165a3333c65de050e3782592bca25
   languageName: node
   linkType: hard
 
-"@axcaxc/rpc-provider@npm:4.17.1":
+"@axiaaxc/rpc-provider@npm:4.17.1":
   version: 4.17.1
-  resolution: "@axcaxc/rpc-provider@npm:4.17.1"
+  resolution: "@axiaaxc/rpc-provider@npm:4.17.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/types": 4.17.1
-    "@axcaxc/util": ^6.11.1
-    "@axcaxc/util-crypto": ^6.11.1
-    "@axcaxc/x-fetch": ^6.11.1
-    "@axcaxc/x-global": ^6.11.1
-    "@axcaxc/x-ws": ^6.11.1
+    "@axiaaxc/types": 4.17.1
+    "@axiaaxc/util": ^6.11.1
+    "@axiaaxc/util-crypto": ^6.11.1
+    "@axiaaxc/x-fetch": ^6.11.1
+    "@axiaaxc/x-global": ^6.11.1
+    "@axiaaxc/x-ws": ^6.11.1
     eventemitter3: ^4.0.7
   checksum: 86d241624fcc411da106a1eb677d7be0eb65e5d802d36858748d3107146445903b1054aa8f0e989f8e3e99b1a7d872250925d603b456fa57a14c1235ab5ac105
   languageName: node
   linkType: hard
 
-"@axcaxc/rpc-provider@npm:5.9.1, @axcaxc/rpc-provider@npm:^5.8.3":
+"@axiaaxc/rpc-provider@npm:5.9.1, @axiaaxc/rpc-provider@npm:^5.8.3":
   version: 5.9.1
-  resolution: "@axcaxc/rpc-provider@npm:5.9.1"
+  resolution: "@axiaaxc/rpc-provider@npm:5.9.1"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@axcaxc/types": 5.9.1
-    "@axcaxc/util": ^7.3.1
-    "@axcaxc/util-crypto": ^7.3.1
-    "@axcaxc/x-fetch": ^7.3.1
-    "@axcaxc/x-global": ^7.3.1
-    "@axcaxc/x-ws": ^7.3.1
+    "@axiaaxc/types": 5.9.1
+    "@axiaaxc/util": ^7.3.1
+    "@axiaaxc/util-crypto": ^7.3.1
+    "@axiaaxc/x-fetch": ^7.3.1
+    "@axiaaxc/x-global": ^7.3.1
+    "@axiaaxc/x-ws": ^7.3.1
     eventemitter3: ^4.0.7
   checksum: 873fdd410720c8fdbe9d23135717f2dd711f68808cfde17fb20a9544054017d0b245b8cf4ee5c5fb62835869810dc6cf57288cc3b5c6d6d22d9806d08718748c
   languageName: node
   linkType: hard
 
-"@axcaxc/types-known@npm:4.0.4-5":
+"@axiaaxc/types-known@npm:4.0.4-5":
   version: 4.0.4-5
-  resolution: "@axcaxc/types-known@npm:4.0.4-5"
+  resolution: "@axiaaxc/types-known@npm:4.0.4-5"
   dependencies:
     "@babel/runtime": ^7.13.9
-    "@axcaxc/networks": ^6.0.5
-    "@axcaxc/types": 4.0.4-5
-    "@axcaxc/util": ^6.0.5
+    "@axiaaxc/networks": ^6.0.5
+    "@axiaaxc/types": 4.0.4-5
+    "@axiaaxc/util": ^6.0.5
     bn.js: ^4.11.9
   checksum: 706cc8ab496b5842b64f5a0c12ac0690c4863a93b7d3098e8edf9d0a49ae53860b679536c1d528d3bec54e0a018e8a39c51b29ccf8575c28037daa4171953eb5
   languageName: node
   linkType: hard
 
-"@axcaxc/types-known@npm:4.17.1":
+"@axiaaxc/types-known@npm:4.17.1":
   version: 4.17.1
-  resolution: "@axcaxc/types-known@npm:4.17.1"
+  resolution: "@axiaaxc/types-known@npm:4.17.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/networks": ^6.11.1
-    "@axcaxc/types": 4.17.1
-    "@axcaxc/util": ^6.11.1
+    "@axiaaxc/networks": ^6.11.1
+    "@axiaaxc/types": 4.17.1
+    "@axiaaxc/util": ^6.11.1
   checksum: 63d392b5f9965f731eb2a26d69f5a2e95dc1226d607178af5e6eede87601eab9a94bf2766c3522fe43701209290cd407a9d8d1fd328d8bfd34106c39fcbe3a36
   languageName: node
   linkType: hard
 
-"@axcaxc/types-known@npm:5.9.1":
+"@axiaaxc/types-known@npm:5.9.1":
   version: 5.9.1
-  resolution: "@axcaxc/types-known@npm:5.9.1"
+  resolution: "@axiaaxc/types-known@npm:5.9.1"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@axcaxc/networks": ^7.3.1
-    "@axcaxc/types": 5.9.1
-    "@axcaxc/util": ^7.3.1
+    "@axiaaxc/networks": ^7.3.1
+    "@axiaaxc/types": 5.9.1
+    "@axiaaxc/util": ^7.3.1
   checksum: 046788632265d42a62edfdc35c8f18caa3a4edcc2427c988cd8fc7ddfa19a7ab63c13cc17414dc09044594a8a6cc9ccec3ae12387f2639fb983ba96cbd66d00e
   languageName: node
   linkType: hard
 
-"@axcaxc/types-known@npm:^5.9.2-10":
+"@axiaaxc/types-known@npm:^5.9.2-10":
   version: 5.9.2-10
-  resolution: "@axcaxc/types-known@npm:5.9.2-10"
+  resolution: "@axiaaxc/types-known@npm:5.9.2-10"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@axcaxc/networks": ^7.4.1
-    "@axcaxc/types": 5.9.2-10
-    "@axcaxc/util": ^7.4.1
+    "@axiaaxc/networks": ^7.4.1
+    "@axiaaxc/types": 5.9.2-10
+    "@axiaaxc/util": ^7.4.1
   checksum: ea0ca89b16408f2b4505c36010a0b00afafcd86b7d547a0a089922e6afc50ba7176837432ac415524efb3e7be272de698c830d0d8190b23ce898457b7989af99
   languageName: node
   linkType: hard
 
-"@axcaxc/types@npm:4.0.4-5":
+"@axiaaxc/types@npm:4.0.4-5":
   version: 4.0.4-5
-  resolution: "@axcaxc/types@npm:4.0.4-5"
+  resolution: "@axiaaxc/types@npm:4.0.4-5"
   dependencies:
     "@babel/runtime": ^7.13.9
-    "@axcaxc/metadata": 4.0.4-5
-    "@axcaxc/util": ^6.0.5
-    "@axcaxc/util-crypto": ^6.0.5
-    "@axcaxc/x-rxjs": ^6.0.5
+    "@axiaaxc/metadata": 4.0.4-5
+    "@axiaaxc/util": ^6.0.5
+    "@axiaaxc/util-crypto": ^6.0.5
+    "@axiaaxc/x-rxjs": ^6.0.5
     "@types/bn.js": ^4.11.6
     bn.js: ^4.11.9
   checksum: e13e588455842e7c2139f15b77fefabecffc8cd2e10646f4cdc42f256b6f21a0282b8c80bc6f3061b78c7985fe1952369ed1f103fbe7a5524953507b18577095
   languageName: node
   linkType: hard
 
-"@axcaxc/types@npm:4.17.1, @axcaxc/types@npm:^4.13.1":
+"@axiaaxc/types@npm:4.17.1, @axiaaxc/types@npm:^4.13.1":
   version: 4.17.1
-  resolution: "@axcaxc/types@npm:4.17.1"
+  resolution: "@axiaaxc/types@npm:4.17.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/metadata": 4.17.1
-    "@axcaxc/util": ^6.11.1
-    "@axcaxc/util-crypto": ^6.11.1
-    "@axcaxc/x-rxjs": ^6.11.1
+    "@axiaaxc/metadata": 4.17.1
+    "@axiaaxc/util": ^6.11.1
+    "@axiaaxc/util-crypto": ^6.11.1
+    "@axiaaxc/x-rxjs": ^6.11.1
   checksum: 698db5a72b4c2a7322df7f5f77dfcc3732fe137b5b2028cd04c1a2408ea204fb3c7f6223f15a6587724c25450f3adf02bf220865153180a3441fb81c1d6b0fc7
   languageName: node
   linkType: hard
 
-"@axcaxc/types@npm:5.9.1, @axcaxc/types@npm:^5.3.2, @axcaxc/types@npm:^5.7.1, @axcaxc/types@npm:^5.9.1":
+"@axiaaxc/types@npm:5.9.1, @axiaaxc/types@npm:^5.3.2, @axiaaxc/types@npm:^5.7.1, @axiaaxc/types@npm:^5.9.1":
   version: 5.9.1
-  resolution: "@axcaxc/types@npm:5.9.1"
+  resolution: "@axiaaxc/types@npm:5.9.1"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@axcaxc/util": ^7.3.1
-    "@axcaxc/util-crypto": ^7.3.1
+    "@axiaaxc/util": ^7.3.1
+    "@axiaaxc/util-crypto": ^7.3.1
     rxjs: ^7.3.0
   checksum: 6ff253dea99ac48422eba54d214161391161916338b74d60b594b53553e65e29e4f7b4cf3b4b1d72dadf4811ea066fc64a70e1251910f1569bbd7e8b870542c6
   languageName: node
   linkType: hard
 
-"@axcaxc/types@npm:5.9.2-10, @axcaxc/types@npm:^5.9.2-10":
+"@axiaaxc/types@npm:5.9.2-10, @axiaaxc/types@npm:^5.9.2-10":
   version: 5.9.2-10
-  resolution: "@axcaxc/types@npm:5.9.2-10"
+  resolution: "@axiaaxc/types@npm:5.9.2-10"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@axcaxc/util": ^7.4.1
-    "@axcaxc/util-crypto": ^7.4.1
+    "@axiaaxc/util": ^7.4.1
+    "@axiaaxc/util-crypto": ^7.4.1
     rxjs: ^7.3.0
   checksum: 1bf082344f50cac8dfc7154469afebb089adaeb777bb64bc418a53d5b24092f4ca9282feef9cd2b758d12cf250d982ada6ea3bf85f0895ff0c2cb297e52b3e23
   languageName: node
   linkType: hard
 
-"@axcaxc/util-crypto@npm:6.11.1, @axcaxc/util-crypto@npm:^6.0.5, @axcaxc/util-crypto@npm:^6.11.1":
+"@axiaaxc/util-crypto@npm:6.11.1, @axiaaxc/util-crypto@npm:^6.0.5, @axiaaxc/util-crypto@npm:^6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/util-crypto@npm:6.11.1"
+  resolution: "@axiaaxc/util-crypto@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/networks": 6.11.1
-    "@axcaxc/util": 6.11.1
-    "@axcaxc/wasm-crypto": ^4.0.2
-    "@axcaxc/x-randomvalues": 6.11.1
+    "@axiaaxc/networks": 6.11.1
+    "@axiaaxc/util": 6.11.1
+    "@axiaaxc/wasm-crypto": ^4.0.2
+    "@axiaaxc/x-randomvalues": 6.11.1
     base-x: ^3.0.8
     base64-js: ^1.5.1
     blakejs: ^1.1.1
@@ -3904,20 +3904,20 @@ __metadata:
     tweetnacl: ^1.0.3
     xxhashjs: ^0.2.2
   peerDependencies:
-    "@axcaxc/util": 6.11.1
+    "@axiaaxc/util": 6.11.1
   checksum: 453476635b15a5a97a8814f1ae80527948d74f14e7c4d549d8c8a48f6ba48412b0d479a3ea426db4b1e0a2a01348d8744455194bdea6376f96afbe19f2fb895c
   languageName: node
   linkType: hard
 
-"@axcaxc/util-crypto@npm:7.8.2, @axcaxc/util-crypto@npm:^7.3.1, @axcaxc/util-crypto@npm:^7.4.1":
+"@axiaaxc/util-crypto@npm:7.8.2, @axiaaxc/util-crypto@npm:^7.3.1, @axiaaxc/util-crypto@npm:^7.4.1":
   version: 7.8.2
-  resolution: "@axcaxc/util-crypto@npm:7.8.2"
+  resolution: "@axiaaxc/util-crypto@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
-    "@axcaxc/networks": 7.8.2
-    "@axcaxc/util": 7.8.2
-    "@axcaxc/wasm-crypto": ^4.2.1
-    "@axcaxc/x-randomvalues": 7.8.2
+    "@axiaaxc/networks": 7.8.2
+    "@axiaaxc/util": 7.8.2
+    "@axiaaxc/wasm-crypto": ^4.2.1
+    "@axiaaxc/x-randomvalues": 7.8.2
     base-x: ^3.0.9
     base64-js: ^1.5.1
     blakejs: ^1.1.1
@@ -3931,18 +3931,18 @@ __metadata:
     tweetnacl: ^1.0.3
     xxhashjs: ^0.2.2
   peerDependencies:
-    "@axcaxc/util": 7.8.2
+    "@axiaaxc/util": 7.8.2
   checksum: 7cc3068e93572451ff4929867fed7577968f640c51a18d07cfec15b3526b237f133929882f461b815e6421ff2c7c41a1462c97670381705139f4f1883d9b7e9e
   languageName: node
   linkType: hard
 
-"@axcaxc/util@npm:6.0.5":
+"@axiaaxc/util@npm:6.0.5":
   version: 6.0.5
-  resolution: "@axcaxc/util@npm:6.0.5"
+  resolution: "@axiaaxc/util@npm:6.0.5"
   dependencies:
     "@babel/runtime": ^7.13.9
-    "@axcaxc/x-textdecoder": 6.0.5
-    "@axcaxc/x-textencoder": 6.0.5
+    "@axiaaxc/x-textdecoder": 6.0.5
+    "@axiaaxc/x-textencoder": 6.0.5
     "@types/bn.js": ^4.11.6
     bn.js: ^4.11.9
     camelcase: ^5.3.1
@@ -3951,13 +3951,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@axcaxc/util@npm:6.11.1, @axcaxc/util@npm:^6.0.5, @axcaxc/util@npm:^6.11.1":
+"@axiaaxc/util@npm:6.11.1, @axiaaxc/util@npm:^6.0.5, @axiaaxc/util@npm:^6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/util@npm:6.11.1"
+  resolution: "@axiaaxc/util@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/x-textdecoder": 6.11.1
-    "@axcaxc/x-textencoder": 6.11.1
+    "@axiaaxc/x-textdecoder": 6.11.1
+    "@axiaaxc/x-textencoder": 6.11.1
     "@types/bn.js": ^4.11.6
     bn.js: ^4.11.9
     camelcase: ^5.3.1
@@ -3966,13 +3966,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@axcaxc/util@npm:7.8.2, @axcaxc/util@npm:^7.3.1, @axcaxc/util@npm:^7.4.1":
+"@axiaaxc/util@npm:7.8.2, @axiaaxc/util@npm:^7.3.1, @axiaaxc/util@npm:^7.4.1":
   version: 7.8.2
-  resolution: "@axcaxc/util@npm:7.8.2"
+  resolution: "@axiaaxc/util@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
-    "@axcaxc/x-textdecoder": 7.8.2
-    "@axcaxc/x-textencoder": 7.8.2
+    "@axiaaxc/x-textdecoder": 7.8.2
+    "@axiaaxc/x-textencoder": 7.8.2
     "@types/bn.js": ^4.11.6
     bn.js: ^4.12.0
     camelcase: ^6.2.0
@@ -3981,65 +3981,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@axcaxc/wasm-crypto-asmjs@npm:^4.2.1":
+"@axiaaxc/wasm-crypto-asmjs@npm:^4.2.1":
   version: 4.2.1
-  resolution: "@axcaxc/wasm-crypto-asmjs@npm:4.2.1"
+  resolution: "@axiaaxc/wasm-crypto-asmjs@npm:4.2.1"
   dependencies:
     "@babel/runtime": ^7.15.3
   checksum: f4c9fed22121eaedeebf7f7bbe3c28e1920f2b84e7a1aea1a9d3807e79d7c236cee71e008527ab2779b079a56d43d6638fe50efa348f918277c65fa083094499
   languageName: node
   linkType: hard
 
-"@axcaxc/wasm-crypto-wasm@npm:^4.2.1":
+"@axiaaxc/wasm-crypto-wasm@npm:^4.2.1":
   version: 4.2.1
-  resolution: "@axcaxc/wasm-crypto-wasm@npm:4.2.1"
+  resolution: "@axiaaxc/wasm-crypto-wasm@npm:4.2.1"
   dependencies:
     "@babel/runtime": ^7.15.3
   checksum: 2eab39628f34dd64987c4109a7d3ca0376946ace322aa67c10119be36b9eebf0f7c68f2e4aea1510f1fbd469c70dc3e8f1d3bd58799c7dcbc3a1e6cb08a69b5d
   languageName: node
   linkType: hard
 
-"@axcaxc/wasm-crypto@npm:^4.0.2, @axcaxc/wasm-crypto@npm:^4.2.1":
+"@axiaaxc/wasm-crypto@npm:^4.0.2, @axiaaxc/wasm-crypto@npm:^4.2.1":
   version: 4.2.1
-  resolution: "@axcaxc/wasm-crypto@npm:4.2.1"
+  resolution: "@axiaaxc/wasm-crypto@npm:4.2.1"
   dependencies:
     "@babel/runtime": ^7.15.3
-    "@axcaxc/wasm-crypto-asmjs": ^4.2.1
-    "@axcaxc/wasm-crypto-wasm": ^4.2.1
+    "@axiaaxc/wasm-crypto-asmjs": ^4.2.1
+    "@axiaaxc/wasm-crypto-wasm": ^4.2.1
   peerDependencies:
-    "@axcaxc/util": "*"
-    "@axcaxc/x-randomvalues": "*"
+    "@axiaaxc/util": "*"
+    "@axiaaxc/x-randomvalues": "*"
   checksum: 2ef25ed7dd297c160fafef9198bd23a3ca5fc8c03fd94903fac4fa8fd11ecc74cea935039e61cebf5458e95f3b6a30f21ceb968d5ddf4a488f05e9cf6d093577
   languageName: node
   linkType: hard
 
-"@axcaxc/x-fetch@npm:^6.11.1":
+"@axiaaxc/x-fetch@npm:^6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/x-fetch@npm:6.11.1"
+  resolution: "@axiaaxc/x-fetch@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/x-global": 6.11.1
+    "@axiaaxc/x-global": 6.11.1
     "@types/node-fetch": ^2.5.10
     node-fetch: ^2.6.1
   checksum: 06d96c8a3ece6b11651948f644823de28aed0eea416466fc00b9dfa60b89a39476b679784c4b64c7ca541a95cb6552030f66974df58269eda0024721850ff1be
   languageName: node
   linkType: hard
 
-"@axcaxc/x-fetch@npm:^7.3.1":
+"@axiaaxc/x-fetch@npm:^7.3.1":
   version: 7.8.2
-  resolution: "@axcaxc/x-fetch@npm:7.8.2"
+  resolution: "@axiaaxc/x-fetch@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
-    "@axcaxc/x-global": 7.8.2
+    "@axiaaxc/x-global": 7.8.2
     "@types/node-fetch": ^2.5.12
     node-fetch: ^2.6.6
   checksum: 0e2dddc69bed82b66df109c62a3f515bba386b3129c5f0669bddf37bfdea46545341ba2e77e7b4f77a007d4c8920be7e024f10079e6af10b9816fee82d6872a9
   languageName: node
   linkType: hard
 
-"@axcaxc/x-global@npm:6.0.5":
+"@axiaaxc/x-global@npm:6.0.5":
   version: 6.0.5
-  resolution: "@axcaxc/x-global@npm:6.0.5"
+  resolution: "@axiaaxc/x-global@npm:6.0.5"
   dependencies:
     "@babel/runtime": ^7.13.9
     "@types/node-fetch": ^2.5.8
@@ -4048,47 +4048,47 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@axcaxc/x-global@npm:6.11.1, @axcaxc/x-global@npm:^6.11.1":
+"@axiaaxc/x-global@npm:6.11.1, @axiaaxc/x-global@npm:^6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/x-global@npm:6.11.1"
+  resolution: "@axiaaxc/x-global@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
   checksum: c0114b2fe8a0f4b238f39b4040a5c917e968bf912b2186bb0860597ead9921c2200dbb91b4462d6476be1243297d1b34479fdd79e934927d4d076005f36c26c9
   languageName: node
   linkType: hard
 
-"@axcaxc/x-global@npm:7.8.2, @axcaxc/x-global@npm:^7.3.1":
+"@axiaaxc/x-global@npm:7.8.2, @axiaaxc/x-global@npm:^7.3.1":
   version: 7.8.2
-  resolution: "@axcaxc/x-global@npm:7.8.2"
+  resolution: "@axiaaxc/x-global@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
   checksum: 9fac7a7a6b6c1c2507e9bd6c04874627827202f789b35f76a4945b46e5afb1f726c6683250261b5b022531b308e60cda7b324bd5912b35ad14640515063f1358
   languageName: node
   linkType: hard
 
-"@axcaxc/x-randomvalues@npm:6.11.1":
+"@axiaaxc/x-randomvalues@npm:6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/x-randomvalues@npm:6.11.1"
+  resolution: "@axiaaxc/x-randomvalues@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/x-global": 6.11.1
+    "@axiaaxc/x-global": 6.11.1
   checksum: b50f64be1d8c76fcae08016d34049f31bd30642c2208ecbacac2b21266dbc05fe284e396b4da044acf5e426895391dfc297f5d22ddb01e786c7e6f4778b19e48
   languageName: node
   linkType: hard
 
-"@axcaxc/x-randomvalues@npm:7.8.2":
+"@axiaaxc/x-randomvalues@npm:7.8.2":
   version: 7.8.2
-  resolution: "@axcaxc/x-randomvalues@npm:7.8.2"
+  resolution: "@axiaaxc/x-randomvalues@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
-    "@axcaxc/x-global": 7.8.2
+    "@axiaaxc/x-global": 7.8.2
   checksum: 9f0927ed2429ed0f94ca5481b64eb378b139399282e9677637141bc4829bf76a85e37806d8050eab08b0969c54d2073d8f5899921a031c5c543ffda43ea0ed03
   languageName: node
   linkType: hard
 
-"@axcaxc/x-rxjs@npm:^6.0.5, @axcaxc/x-rxjs@npm:^6.11.1":
+"@axiaaxc/x-rxjs@npm:^6.0.5, @axiaaxc/x-rxjs@npm:^6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/x-rxjs@npm:6.11.1"
+  resolution: "@axiaaxc/x-rxjs@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
     rxjs: ^6.6.7
@@ -4096,84 +4096,84 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@axcaxc/x-textdecoder@npm:6.0.5":
+"@axiaaxc/x-textdecoder@npm:6.0.5":
   version: 6.0.5
-  resolution: "@axcaxc/x-textdecoder@npm:6.0.5"
+  resolution: "@axiaaxc/x-textdecoder@npm:6.0.5"
   dependencies:
     "@babel/runtime": ^7.13.9
-    "@axcaxc/x-global": 6.0.5
+    "@axiaaxc/x-global": 6.0.5
   checksum: f90943206aed012b1b90c3a7a973cfcfc3b16a6b7a99cd1af426db9c66ab16447949a1eb060123f07d026e9b97760ffd39fb70584d53a453541becbedc80c6dc
   languageName: node
   linkType: hard
 
-"@axcaxc/x-textdecoder@npm:6.11.1":
+"@axiaaxc/x-textdecoder@npm:6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/x-textdecoder@npm:6.11.1"
+  resolution: "@axiaaxc/x-textdecoder@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/x-global": 6.11.1
+    "@axiaaxc/x-global": 6.11.1
   checksum: 6daf7246a0bf74afd2eecd11c63b75499ae07a1d689c4f813ad2b69fb4292b0484889b950a5758958ce4e3bcedea3458f467dc13a3fa3e1366d33c32678d69b6
   languageName: node
   linkType: hard
 
-"@axcaxc/x-textdecoder@npm:7.8.2":
+"@axiaaxc/x-textdecoder@npm:7.8.2":
   version: 7.8.2
-  resolution: "@axcaxc/x-textdecoder@npm:7.8.2"
+  resolution: "@axiaaxc/x-textdecoder@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
-    "@axcaxc/x-global": 7.8.2
+    "@axiaaxc/x-global": 7.8.2
   checksum: 5e26717ce427070a5c9670517a998e7d822fe796b6ed67ed9aa06ad9d9971d88f3e8eb42ab2163a237f761390d9cc76791faa903e97085e65dc7c299926a9086
   languageName: node
   linkType: hard
 
-"@axcaxc/x-textencoder@npm:6.0.5":
+"@axiaaxc/x-textencoder@npm:6.0.5":
   version: 6.0.5
-  resolution: "@axcaxc/x-textencoder@npm:6.0.5"
+  resolution: "@axiaaxc/x-textencoder@npm:6.0.5"
   dependencies:
     "@babel/runtime": ^7.13.9
-    "@axcaxc/x-global": 6.0.5
+    "@axiaaxc/x-global": 6.0.5
   checksum: 6b2c2c031821f25a68f8e0b1b8585f15b5212cfbb9fe21915eaa431b5dcb2c9f2d41d7fac1c81275cc4d385c5204ce075c05f2f71bea08852194f3f5b70dcca9
   languageName: node
   linkType: hard
 
-"@axcaxc/x-textencoder@npm:6.11.1":
+"@axiaaxc/x-textencoder@npm:6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/x-textencoder@npm:6.11.1"
+  resolution: "@axiaaxc/x-textencoder@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/x-global": 6.11.1
+    "@axiaaxc/x-global": 6.11.1
   checksum: 29f740cc230b3235a71e718b3a240a8f6892f675cd04bc9d995937d9053af16bc117161ed285d4bd55d5ddfab6389b9d4736c74f41eeef7196ec175519c83934
   languageName: node
   linkType: hard
 
-"@axcaxc/x-textencoder@npm:7.8.2":
+"@axiaaxc/x-textencoder@npm:7.8.2":
   version: 7.8.2
-  resolution: "@axcaxc/x-textencoder@npm:7.8.2"
+  resolution: "@axiaaxc/x-textencoder@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
-    "@axcaxc/x-global": 7.8.2
+    "@axiaaxc/x-global": 7.8.2
   checksum: 3464d122aeaa2a45d3576c7862e0b703726cff86671b921a48a99d518209d9a13cfb86229f723003d3e91ce4d3b0f2bf48374becf5662fac890e229d2b31315d
   languageName: node
   linkType: hard
 
-"@axcaxc/x-ws@npm:^6.11.1":
+"@axiaaxc/x-ws@npm:^6.11.1":
   version: 6.11.1
-  resolution: "@axcaxc/x-ws@npm:6.11.1"
+  resolution: "@axiaaxc/x-ws@npm:6.11.1"
   dependencies:
     "@babel/runtime": ^7.14.6
-    "@axcaxc/x-global": 6.11.1
+    "@axiaaxc/x-global": 6.11.1
     "@types/websocket": ^1.0.3
     websocket: ^1.0.34
   checksum: 056b7e03d7bc643ab2d4d3beba7fa97e3dcab8c9cb152677610214ecc34f0c02c2ae7e40d33903c8aeafa0f9c20e106d94785849ca1b9c890e031b1ecd98a9b8
   languageName: node
   linkType: hard
 
-"@axcaxc/x-ws@npm:^7.3.1":
+"@axiaaxc/x-ws@npm:^7.3.1":
   version: 7.8.2
-  resolution: "@axcaxc/x-ws@npm:7.8.2"
+  resolution: "@axiaaxc/x-ws@npm:7.8.2"
   dependencies:
     "@babel/runtime": ^7.16.0
-    "@axcaxc/x-global": 7.8.2
+    "@axiaaxc/x-global": 7.8.2
     "@types/websocket": ^1.0.4
     websocket: ^1.0.34
   checksum: 64b5965bc3bbf441611f15b4dfc019d91381ba3d5334d5e01cc409d5e140742d43c621e03dda4a07c6b31933e3936b8cf33f7d23647c8d392142131113ec5ae8
@@ -4344,8 +4344,8 @@ __metadata:
   version: 0.2.5
   resolution: "@snowfork/snowbridge-types@npm:0.2.5"
   dependencies:
-    "@axcaxc/keyring": ^7.1.1
-    "@axcaxc/types": ^5.3.2
+    "@axiaaxc/keyring": ^7.1.1
+    "@axiaaxc/types": ^5.3.2
   checksum: 3e0c7755a6d4ee2aeb331808a37b0ea29f573acf2094b024b1b2ea2395fadd95ef633b1ac135ca36eefa682f8d4f0c60e548178c6e538eb65691f2211c0433a8
   languageName: node
   linkType: hard
@@ -4415,8 +4415,8 @@ __metadata:
   version: 0.6.2
   resolution: "@subsocial/types@npm:0.6.2"
   dependencies:
-    "@axcaxc/types": ^5.9.2-10
-    "@axcaxc/types-known": ^5.9.2-10
+    "@axiaaxc/types": ^5.9.2-10
+    "@axiaaxc/types-known": ^5.9.2-10
     "@subsocial/utils": ^0.6.2
     cids: ^0.7.1
   checksum: a6025b39e1eaf2beda41972b35f10a927a5fc4e108f686901141825cc93bc4d1a9e102a19b73c0c1ac5444744673a4a53999fc943fe41a6ed93944eaadb5df52
@@ -4455,8 +4455,8 @@ __metadata:
   version: 0.3.19
   resolution: "@axlib/connect@npm:0.3.19"
   dependencies:
-    "@axcaxc/api": ^5.8.3
-    "@axcaxc/rpc-provider": ^5.8.3
+    "@axiaaxc/api": ^5.8.3
+    "@axiaaxc/rpc-provider": ^5.8.3
     "@axlib/connect-extension-protocol": ^0.3.0
     "@axlib/smolaxc-light": ^0.4.11
     browserify-fs: ^1.0.0
@@ -4464,7 +4464,7 @@ __metadata:
     file-entry-cache: ^6.0.1
     mkdirp: ^1.0.4
   peerDependencies:
-    "@axcaxc/wasm-crypto": ^4.1.2
+    "@axiaaxc/wasm-crypto": ^4.1.2
   checksum: 3100fc77d6175144bdee8c20d9aca3a786cfdd5344aaecf33292c103688905e5686a57ea999c3ae0d9d651e2277926ab757db9b7de34656ce848cf90f42cb0b3
   languageName: node
   linkType: hard
@@ -15501,8 +15501,8 @@ __metadata:
   version: 1.2.6
   resolution: "moonbeam-types-bundle@npm:1.2.6"
   dependencies:
-    "@axcaxc/keyring": ^7.3.1
-    "@axcaxc/types": ^5.9.1
+    "@axiaaxc/keyring": ^7.3.1
+    "@axiaaxc/types": ^5.9.1
     typescript: ^4.3.5
   checksum: 7f61e3eba3de18fc6992931a49931a31ee4bc54e538f831d014d6524c1036886928a7fb83f08a1c0138b77e7213325035bf425fa82ac423ac8ab1a07f2bfdea2
   languageName: node
@@ -16800,8 +16800,8 @@ __metadata:
   version: 1.0.14
   resolution: "pontem-types-bundle@npm:1.0.14"
   dependencies:
-    "@axcaxc/keyring": ^7.3.1
-    "@axcaxc/types": ^5.7.1
+    "@axiaaxc/keyring": ^7.3.1
+    "@axiaaxc/types": ^5.7.1
     typescript: ^4.4.2
   checksum: d7c6683230927256b1840009320b3673989d524d0d54ff98362f189afdc575f58fc830afe9080c2d564dafd6bbfb0bd55d974a304d47cfedfcf99137e3a0c3d5
   languageName: node

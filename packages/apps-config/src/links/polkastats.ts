@@ -12,9 +12,9 @@ export default {
     AlphaNet: 'alphanet'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://${chain}.axcstats.io/${path}/${data.toString()}`,
+    `https://${chain}.axiastats.io/${path}/${data.toString()}`,
   isActive: true,
-  logo: externalLogos.axcstats as string,
+  logo: externalLogos.axiastats as string,
   paths: {
     address: 'account',
     block: 'block',
@@ -22,5 +22,5 @@ export default {
     intention: 'intention',
     validator: 'validator'
   },
-  url: 'https://axcstats.io/'
+  url: 'https://axiastats.io/'
 };

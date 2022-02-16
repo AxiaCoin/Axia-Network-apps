@@ -12,9 +12,9 @@ export const AxiassemblyIo = {
     AXIA: 'axia'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://${chain}.axcssembly.io/${path}/${data.toString()}`,
+    `https://${chain}.axiassembly.io/${path}/${data.toString()}`,
   isActive: true,
-  logo: externalLogos.axcssembly as string,
+  logo: externalLogos.axiassembly as string,
   paths: {
     bounty: 'bounty',
     council: 'motion',
@@ -23,7 +23,7 @@ export const AxiassemblyIo = {
     tip: 'tip',
     treasury: 'treasury'
   },
-  url: 'https://axcssembly.io/'
+  url: 'https://axiassembly.io/'
 };
 
 export const AxiassemblyNetwork = {
@@ -36,6 +36,6 @@ export const AxiassemblyNetwork = {
     Moonriver: 'moonriver'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://${chain}.axcssembly.network/${path}/${data.toString()}`,
-  url: 'https://axcssembly.network/'
+    `https://${chain}.axiassembly.network/${path}/${data.toString()}`,
+  url: 'https://axiassembly.network/'
 };
