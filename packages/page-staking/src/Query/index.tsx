@@ -3,7 +3,7 @@
 
 import React, { useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import styled from 'styled-components';
 import { Button, InputAddressSimple } from '@axia-js/react-components';
 
 import { useTranslation } from '../translate';
@@ -50,4 +50,16 @@ function Query ({ className }: Props): React.ReactElement<Props> {
   );
 }
 
-export default React.memo(Query);
+export default React.memo(styled(Query)`
+.ui.input>input {
+  margin: 0px;
+  max-width: 50%;
+  margin-right: 12px;
+  border: 2px solid #B1B5C4;
+}
+.isDisabled, .isReadOnly {
+  height: 56px;
+  width: 56px;
+}
+
+`);

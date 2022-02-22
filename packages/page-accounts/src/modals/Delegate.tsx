@@ -75,6 +75,7 @@ function Delegate ({ onClose, previousAmount, previousConviction, previousDelega
         </Modal.Columns>
         <Modal.Columns hint={t('The amount to allocate and the conviction that will be applied to all votes made on a referendum.')}>
           <InputBalance
+            className='CustomInput'
             autoFocus
             help={t<string>('Amount to delegate for any democracy vote. This is adjusted using the available funds on the account.')}
             isError={!!amountError?.error}

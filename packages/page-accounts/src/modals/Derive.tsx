@@ -228,7 +228,7 @@ function Derive ({ className = '', from, onClose }: Props): React.ReactElement {
             ? (
               <>
                 <Button
-                  icon='step-backward'
+                  icon='arrow-left'
                   label={t<string>('Prev')}
                   onClick={toggleConfirmation}
                 />
@@ -242,7 +242,7 @@ function Derive ({ className = '', from, onClose }: Props): React.ReactElement {
             )
             : (
               <Button
-                icon='step-forward'
+                icon='arrow-right'
                 isDisabled={!isValid}
                 label={t<string>('Next')}
                 onClick={toggleConfirmation}

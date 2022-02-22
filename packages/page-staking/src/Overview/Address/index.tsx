@@ -170,7 +170,7 @@ function Address ({ address, className = '', filterName, hasQueries, isElected, 
         {hasQueries && (
           <Icon
             className='highlight--color'
-            icon='chart-line'
+            icon='chart-bar'
             onClick={_onQueryStats}
           />
         )}

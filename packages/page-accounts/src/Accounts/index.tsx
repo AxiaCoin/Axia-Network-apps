@@ -213,7 +213,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
           onStatusChange={onStatusChange}
         />
       )}
-      <BannerExtension />
+      {/* <BannerExtension /> */}
       <BannerClaims />
       <Summary balance={balances.summary} />
       <SummaryBox>
@@ -223,21 +223,23 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
         >
           <SortDropdown
             defaultValue={sortBy}
-            label={t<string>('sort by')}
+            label={t<string>('Sort by')}
             onChange={onDropdownChange()}
-            onClick={onSortDirectionChange()}
+            // onClick={onSortDirectionChange()}
             options={dropdownOptions()}
             sortDirection={sortFromMax ? 'ascending' : 'descending'}
+            className='customsort'
           />
           <FilterInput
             filterOn={filterOn}
-            label={t<string>('filter by name or tags')}
+            label={t<string>('Filter by name or tags')}
             setFilter={setFilter}
+            className='customfilter customsort'
           />
         </section>
         <Button.Group>
           <Button
-            icon='plus'
+            icon='plus-square'
             isDisabled={isIpfs}
             label={t<string>('Add account')}
             onClick={_openCreateModal}
@@ -250,7 +252,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
           />
           <Button
             icon='qrcode'
-            label={t<string>('Add via Qr')}
+            label={t<string>('Add via QR')}
             onClick={toggleQr}
           />
           {isLedgerEnabled && (
@@ -264,13 +266,13 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
           )}
           <Button
             icon='plus'
-            isDisabled={!(api.tx.multisig || api.tx.utility) || !hasAccounts}
+            // isDisabled={!(api.tx.multisig || api.tx.utility) || !hasAccounts}
             label={t<string>('Multisig')}
             onClick={toggleMultisig}
           />
           <Button
             icon='plus'
-            isDisabled={!api.tx.proxy || !hasAccounts}
+            // isDisabled={!api.tx.proxy || !hasAccounts}
             label={t<string>('Proxied')}
             onClick={toggleProxy}
           />
@@ -293,10 +295,25 @@ export default React.memo(styled(Overview)`
   .ui--Dropdown {
     width: 15rem;
   }
-
   .dropdown-section {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
+  // .customfilter{
+  //   width:80.5rem !important;
+  // }
+  .customsort input{
+    border: 1px solid #B1B5C4;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background:transparent;
+  }
+  .customsort .ui--Dropdown{
+    // border: 1px solid #B1B5C4;
+    // box-sizing: border-box;
+    // border-radius: 12px;
+    background:transparent;
+  }
+  
 `);

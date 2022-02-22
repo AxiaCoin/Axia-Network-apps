@@ -378,8 +378,8 @@ function Forks ({ className }: Props): React.ReactElement<Props> | null {
     <div className={className}>
       <SummaryBox>
         <section>
-          <CardSummary label={t<string>('blocks')}>{formatNumber(countRef.current.numBlocks)}</CardSummary>
-          <CardSummary label={t<string>('forks')}>{formatNumber(countRef.current.numForks)}</CardSummary>
+          <CardSummary className='CustomBlockforks'  label={t<string>('blocks')}>{formatNumber(countRef.current.numBlocks)}</CardSummary>
+          <CardSummary className='CustomBlockforks' label={t<string>('forks')}>{formatNumber(countRef.current.numForks)}</CardSummary>
         </section>
       </SummaryBox>
       <table>
@@ -400,8 +400,12 @@ export default React.memo(styled(Forks)`
     font: var(--font-mono);
 
     td {
-      padding: 0.25rem 0.5rem;
+      padding: 0.8rem 0.8rem;
       text-align: center;
+      // background: #FFFFFF;
+      // border: 1px solid #E6E8EC;
+      // box-sizing: border-box;
+      // border-radius: 12px;
 
       .author,
       .contents {
@@ -434,9 +438,14 @@ export default React.memo(styled(Forks)`
       }
 
       &.header {
-        background: #fff;
-        border: 1px solid #e6e6e6;
-        border-radius: 0.25rem;
+        // background: #fff;
+        // border: 1px solid #e6e6e6;
+        // border-radius: 0.25rem;
+        background: #FFFFFF;
+        border: 1px solid #E6E8EC;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-size:13px;
 
         &.isEmpty {
           background: transparent;
@@ -444,7 +453,11 @@ export default React.memo(styled(Forks)`
         }
 
         &.isFinalized {
-          background: rgba(0, 255, 0, 0.1);
+          // background: rgba(0, 255, 0, 0.1);
+          background: #D8F3EB;
+          border: 1px solid #35B994;
+          box-sizing: border-box;
+          border-radius: 12px;
         }
 
         &.isLink {

@@ -19,17 +19,18 @@ function HelpOverlay ({ className = '', md }: Props): React.ReactElement<Props> 
 
   return (
     <div className={`ui--HelpOverlay ${className}`}>
-      <div className='help-button'>
+      {/* <div className='help-button'>
         <Icon
           icon='question-circle'
           onClick={toggleVisible}
         />
       </div>
       <div className={`help-slideout ${isVisible ? 'open' : 'closed'}`}>
-        <div className='help-button'>
+        <div className='help-button HelpBtnIcon'>
           <Icon
             icon='times'
             onClick={toggleVisible}
+            className='closeIcon'
           />
         </div>
         <ReactMd
@@ -37,17 +38,30 @@ function HelpOverlay ({ className = '', md }: Props): React.ReactElement<Props> 
           escapeHtml={false}
           source={md}
         />
-      </div>
+      </div> */}
     </div>
   );
 }
 
 export default React.memo(styled(HelpOverlay)`
   .help-button {
-    color: var(--color-text);
+    color: #777E91;
     cursor: pointer;
     font-size: 2rem;
-    padding: 0.35rem 1.5rem 0 0;
+    padding: 0.35rem 8rem 0 0;
+
+  }
+
+  .HelpBtnIcon{
+    color: #777E91;
+    background: white;
+    width: 50px;
+    font-size: 15px;
+    padding: 15px 20px;
+    border-radius: 50%;
+    margin-left: 91%;
+    margin-top: 5px;
+
   }
 
   > .help-button {
@@ -75,11 +89,31 @@ export default React.memo(styled(HelpOverlay)`
     }
 
     .help-content {
-      padding: 1rem 1.5rem 5rem;
+      padding: 0rem 2em 5rem;
+      // color:#000;
     }
-
     &.open {
       right: 0;
     }
+    .help-content h1{
+      text-transform:capitalize;
+      color: #23262F;
+      font-weight: 500;
+      font-size: 24px;
+    }
+    .help-content p{
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: #353945;
+    }
+  }
+  .closeIcon {
+    cursor: pointer;
+    // position: absolute;
+    // right: 0em;
+    // top: 0.75rem;
+    // background: red;
+    // color: #fff;
   }
 `);

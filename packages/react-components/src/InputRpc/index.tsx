@@ -7,6 +7,7 @@ import type { DefinitionRpcExt } from '@axia-js/types/types';
 import type { DropdownOptions } from '../util/types';
 
 import React, { useCallback, useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 import { useApi } from '@axia-js/react-hooks';
 
@@ -72,13 +73,13 @@ function InputRpc ({ className = '', defaultValue, help, label, onChange, withLa
       withLabel={withLabel}
     >
       <SelectSection
-        className='small'
+        className='small CustomSmall'
         onChange={_onSectionChange}
         options={optionsSection}
         value={value}
       />
       <SelectMethod
-        className='large'
+        className='large CustomLarge'
         onChange={_onMethodChange}
         options={optionsMethod}
         value={value}
@@ -87,4 +88,15 @@ function InputRpc ({ className = '', defaultValue, help, label, onChange, withLa
   );
 }
 
-export default React.memo(InputRpc);
+export default React.memo(styled(InputRpc)`
+.CustomSmall .ui.selection.dropdown{
+  border: 2px solid #B1B5C4;
+  border-radius: 12px 0px 0px 12px !important;
+  border-right-style: inset !important;
+}
+.CustomLarge .ui.selection.dropdown{
+  border: 2px solid #B1B5C4;
+  border-radius: 0px 12px 12px 0px !important;
+  border-left-style: 0 !important;
+}
+`);

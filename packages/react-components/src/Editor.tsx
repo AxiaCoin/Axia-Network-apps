@@ -70,8 +70,12 @@ function Editor ({ className = '', code, isValid, onEdit }: Props): React.ReactE
 
 export default React.memo(styled(Editor)`
   .codeflask {
-    border: 1px solid var(--border-input);
-    background: transparent;
+    // border: 1px solid var(--border-input);
+    // background: transparent;
+    background: #FFFFFF;
+    border: 2px solid #B1B5C4;
+    box-sizing: border-box;
+    border-radius: 12px;
   }
 
   &.invalid {
@@ -79,5 +83,8 @@ export default React.memo(styled(Editor)`
       background-color: #fff6f6;
       border-color: #e0b4b4;
     }
+  }
+  .codeflask__flatten{
+    color:#48f093 !important;
   }
 `);

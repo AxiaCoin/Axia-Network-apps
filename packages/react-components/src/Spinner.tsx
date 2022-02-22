@@ -4,7 +4,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import spinnerSrc from './Spinner.png';
+import spinnerSrc from './Spinner-2.png';
 import { useTranslation } from './translate';
 
 interface Props {
@@ -25,7 +25,7 @@ function Spinner ({ className = '', label, noLabel, variant = 'app' }: Props): R
   return (
     <div className={`${className} ui--Spinner variant-${variant}`}>
       <img
-        className={variant === 'push' ? '' : 'highlight--bg highlight--border'}
+        className={variant === 'push' ? '' : ''}
         src={spinnerSrc as string}
       />
       {!noLabel && variant.startsWith('app') && <div className='text'>{label || t('Retrieving data')}</div>}

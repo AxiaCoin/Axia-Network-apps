@@ -58,7 +58,7 @@ const ICON_PADDING = 0.5;
 export default React.memo(styled(Button)`
   background: transparent;
   border: none;
-  color: inherit;
+  color: #178FE1;
   cursor: pointer;
   line-height: 1;
   margin: 0;
@@ -68,11 +68,11 @@ export default React.memo(styled(Button)`
   text-align: center;
 
   &:not(.hasLabel) {
-    padding: 0.7em;
+    padding: 0.25em 0.25em;
 
     .ui--Icon {
-      padding: 0.6rem;
-      margin: -0.6rem;
+      // padding: 1rem;
+      // margin: -0.6rem;
     }
   }
 
@@ -101,9 +101,11 @@ export default React.memo(styled(Button)`
   }
 
   &.isDisabled, &.isReadOnly {
-    background: none;
-    box-shadow: none;
     cursor: not-allowed;
+    color: #ffffff;
+    background: #007CBD;
+    opacity: 0.5;
+    border-radius: 12px;
   }
 
   &.isBusy {
@@ -134,12 +136,13 @@ export default React.memo(styled(Button)`
   }
 
   .ui--Icon {
-    border-radius: 50%;
+    border-radius: 28%;
     box-sizing: content-box;
-    height: 1rem;
+    // height: 1rem;
     margin: -${ICON_PADDING}rem 0;
     padding: ${ICON_PADDING}rem;
-    width: 1rem;
+    // width: 1rem;
+    
   }
 
   &.isBusy {

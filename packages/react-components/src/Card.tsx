@@ -26,6 +26,16 @@ export default React.memo(styled(Card)`
   min-width: 24%;
   justify-content: space-around;
 
+  h1,h2,h3,h4,h5{
+    font-weight:600;
+    font-size:15px;
+
+  }
+
+  .ui--Button-Group{
+    text-align:right !important;
+  }
+
   label {
     opacity: 0.42;
   }
@@ -78,5 +88,8 @@ export default React.memo(styled(Card)`
 
   &.withBottomMargin {
     margin-bottom: 1.5rem;
+  }
+  .WnYpr.isDisabled{
+    color: #178FE1 !important;
   }
 `);

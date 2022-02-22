@@ -59,6 +59,7 @@ function SidebarEditableSection ({ accountIndex, address, isBeingEdited, onUpdat
         data-testid='sidebar-tags'
       >
         <Tags
+          className='CustomH5'
           isEditable
           isEditing={isEditingTags}
           onChange={setTags}

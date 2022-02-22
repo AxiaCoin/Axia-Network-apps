@@ -6,6 +6,7 @@ import type { RawParam } from '@axia-js/react-params/types';
 import type { TypeDef } from '@axia-js/types/types';
 
 import React, { useCallback, useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 import Params from '@axia-js/react-params';
 import { getTypeDef } from '@axia-js/types/create';
@@ -82,7 +83,7 @@ function ExtrinsicDisplay ({ defaultValue, isDisabled, isError, isPrivate, label
   const { fn: { meta, method, section }, params } = extrinsic;
 
   return (
-    <div className='extrinsics--Extrinsic'>
+    <div className='extrinsics--Extrinsic '>
       <InputExtrinsic
         defaultValue={defaultValue}
         help={meta?.docs.join(' ')}
@@ -94,6 +95,7 @@ function ExtrinsicDisplay ({ defaultValue, isDisabled, isError, isPrivate, label
         withLabel={withLabel}
       />
       <Params
+        className='CustomParams'
         key={`${section}.${method}:params` /* force re-render on change */}
         onChange={setValues}
         onEnter={onEnter}
@@ -105,4 +107,6 @@ function ExtrinsicDisplay ({ defaultValue, isDisabled, isError, isPrivate, label
   );
 }
 
-export default React.memo(ExtrinsicDisplay);
+export default React.memo(styled(ExtrinsicDisplay)`
+
+`);

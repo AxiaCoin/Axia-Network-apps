@@ -4,6 +4,7 @@
 import type BN from 'bn.js';
 
 import React, { useCallback, useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 import { useBalance, useBounties } from '@axia-js/app-bounties/hooks';
 import { Button, Input, InputAddress, InputBalance, MarkError, Modal, TxButton } from '@axia-js/react-components';
@@ -67,6 +68,7 @@ function BountyCreate () {
           <Modal.Content>
             <Modal.Columns hint={t<string>('Description of the Bounty (to be stored on-chain)')}>
               <Input
+                className='CustomDropdown'
                 autoFocus
                 defaultValue={TITLE_DEFAULT_VALUE}
                 help={t<string>('The description of this bounty')}
@@ -131,4 +133,6 @@ function BountyCreate () {
   );
 }
 
-export default React.memo(BountyCreate);
+export default React.memo(styled(BountyCreate)`
+
+`);

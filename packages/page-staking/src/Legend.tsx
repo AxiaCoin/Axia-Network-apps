@@ -31,7 +31,7 @@ function Legend ({ className, isRelay }: Props): React.ReactElement<Props> {
             color='purple'
             icon='vector-square'
           />
-          {t('Para validator')}
+          {t('CoreChain validator')}
         </span>
       )}
       <span>
@@ -84,12 +84,23 @@ export default React.memo(styled(Legend)`
   font-size: 0.85rem;
   padding: 1rem 0.5rem;
   text-align: center;
+  background: #FFFFFF;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
 
   .ui--Badge {
     margin-right: 0.5rem;
   }
 
-  span+span {
-    margin-left: 1rem;
+  // span+span {
+  //   margin-left: 1rem;
+  // }
+
+  &.CustomBg{
+    background: #FFFFFF;
+    border-radius: 12px;
+    margin-top:12px;
   }
+
 `);

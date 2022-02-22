@@ -7,6 +7,7 @@ import type { UnappliedSlash } from '@axia-js/types/interfaces';
 import type { NominatedBy, ValidatorInfo } from '../types';
 
 import React, { useCallback, useMemo } from 'react';
+import styled from 'styled-components';
 
 import { AddressSmall, Badge, Checkbox, Icon } from '@axia-js/react-components';
 import { checkVisibility } from '@axia-js/react-components/util';
@@ -71,7 +72,7 @@ function Validator ({ allSlashes, canSelect, filterName, info, isNominated, isSe
   const { accountId, bondOther, bondOwn, bondTotal, commissionPer, isBlocking, isElected, isFavorite, key, lastPayout, numNominators, rankOverall, stakedReturnCmp } = info;
 
   return (
-    <tr>
+    <tr className='Customheight'>
       <td className='badge together'>
         <Favorite
           address={key}
@@ -156,4 +157,8 @@ function Validator ({ allSlashes, canSelect, filterName, info, isNominated, isSe
   );
 }
 
-export default React.memo(Validator);
+export default React.memo(styled(Validator)`
+  .Customheight td{
+    height:70px !important;
+  }
+`);

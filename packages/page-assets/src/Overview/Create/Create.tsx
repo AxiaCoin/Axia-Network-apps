@@ -85,7 +85,7 @@ function Create ({ assetIds, className, onClose, openId }: Props): React.ReactEl
       <Modal.Actions>
         {step === 1 &&
           <Button
-            icon='step-forward'
+            icon='arrow-right'
             isDisabled={!asset}
             label={t<string>('Next')}
             onClick={nextStep}
@@ -94,7 +94,7 @@ function Create ({ assetIds, className, onClose, openId }: Props): React.ReactEl
         {step === 2 && (
           <>
             <Button
-              icon='step-backward'
+              icon='arrow-left'
               label={t<string>('Prev')}
               onClick={prevStep}
             />

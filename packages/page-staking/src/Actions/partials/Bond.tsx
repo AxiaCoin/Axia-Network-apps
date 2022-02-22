@@ -7,6 +7,7 @@ import type { AmountValidateState, DestinationType } from '../types';
 import type { BondInfo } from './types';
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import styled from 'styled-components';
 
 import { Dropdown, InputAddress, InputBalance, MarkError, Modal, Static } from '@axia-js/react-components';
 import { useApi, useCall } from '@axia-js/react-hooks';
@@ -96,8 +97,8 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
   const isDestError = isAccount && destBalance && destBalance.accountId.eq(destAccount) && destBalance.freeBalance.isZero();
 
   return (
-    <div className={className}>
-      <Modal.Columns
+    <div className={className} id='modal-content'>
+      <Modal.Columns className='column-alignment'
         hint={
           <>
             <p>{t<string>('Think of the stash as your cold wallet and the controller as your hot wallet. Funding operations are controlled by the stash, any other non-funding actions by the controller itself.')}</p>
@@ -125,7 +126,7 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
         />
       </Modal.Columns>
       {startBalance && (
-        <Modal.Columns
+        <Modal.Columns className='column-alignment'
           hint={
             <>
               <p>{t<string>('The amount placed at-stake should not be your full available available amount to allow for transaction fees.')}</p>
@@ -167,7 +168,7 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
           )}
         </Modal.Columns>
       )}
-      <Modal.Columns hint={t<string>('Rewards (once paid) can be deposited to either the stash or controller, with different effects.')}>
+      <Modal.Columns className='column-alignment' hint={t<string>('Rewards (once paid) can be deposited to either the stash or controller, with different effects.')}>
         <Dropdown
           defaultValue={0}
           help={t<string>('The destination account for any payments as either a nominator or validator')}
@@ -193,4 +194,22 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
   );
 }
 
-export default React.memo(Bond);
+export default React.memo(styled(Bond)`
+.column-alignment{
+    display: flex;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+}
+article.warning {
+  border-color: rgba(255,196,12,1);
+  padding: 20px 24px !important;
+  margin-top: 20px;
+  background: #FFF8EC;
+  border: 1px solid #FFDE9E;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+`);

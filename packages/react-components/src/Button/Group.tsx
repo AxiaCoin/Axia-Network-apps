@@ -17,10 +17,12 @@ function ButtonGroup ({ children, className = '', isCentered }: GroupProps): Rea
 export default React.memo(styled(ButtonGroup)`
   margin: 1rem 0;
   text-align: right;
+  width:100%;
 
   &.isCentered {
     margin-bottom: 0.5rem;
     text-align: center;
+    // background:red;
   }
 
   &+.ui--Table {

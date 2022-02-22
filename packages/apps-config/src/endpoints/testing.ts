@@ -19,18 +19,10 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
     // alphabetical based on chain name, e.g. Amber, Arcadia, Beresheet, ...
     {
       info: 'axctestnet',
-      text: t('rpc.test.axctestnet', 'AXC TestNet', { ns: 'apps-config' }),
+      text: t('rpc.test.axctestnet', 'Zeeve TestNet', { ns: 'apps-config' }),
       providers: {
         ZFullTes: 'wss://wss.test.axiacoin.network',
         ZArchTes: 'wss://archive.test.axiacoin.network'
-      }
-    },
-
-    {
-      info: 'pontem',
-      text: t('rpc.test.pontem', 'Dummy Pontem', { ns: 'apps-config' }),
-      providers: {
-        NoWhere: 'wss://example.com'
       }
     }
   

@@ -9,7 +9,6 @@
     "@axia-js/extension-compat-metamask": "0.1.0",
     "@axia-js/extension-dapp": "0.1.0",
     "@babel/runtime": "^7.15.4",
-    "@axlib/connect": "^0.3.18",
     "fflate": "^0.7.1",
     "rxjs": "^7.3.0"
   }

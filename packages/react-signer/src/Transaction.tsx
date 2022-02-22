@@ -80,4 +80,10 @@ export default React.memo(styled(Transaction)`
       opacity: 0.6;
     }
   }
-`);
+  .ui.disabled.dropdown, .ui.dropdown .menu>.disabled.item{
+    border: 2px dashed #B1B5C4 ;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+ 
+  `);

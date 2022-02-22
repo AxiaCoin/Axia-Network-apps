@@ -219,7 +219,7 @@ function Upload ({ onClose }: Props): React.ReactElement {
         {step === 1
           ? (
             <Button
-              icon='step-forward'
+              icon='arrow-right'
               isDisabled={!code || !contractAbi}
               label={t<string>('Next')}
               onClick={nextStep}
@@ -227,7 +227,7 @@ function Upload ({ onClose }: Props): React.ReactElement {
           )
           : (
             <Button
-              icon='step-backward'
+              icon='arrow-left'
               label={t<string>('Prev')}
               onClick={prevStep}
             />

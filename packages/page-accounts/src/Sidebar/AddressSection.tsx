@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
+import styled from 'styled-components';
 
 import { AccountName, IdentityIcon, Input } from '@axia-js/react-components';
 import { AddressFlags } from '@axia-js/react-hooks/types';
@@ -28,6 +29,7 @@ function AddressSection ({ accountIndex, defaultValue, editingName, flags, onCha
       />
       <div className='ui--AddressSection__AddressColumn'>
         <AccountName
+          
           override={
             editingName
               ? (
@@ -59,4 +61,10 @@ function AddressSection ({ accountIndex, defaultValue, editingName, flags, onCha
   );
 }
 
-export default React.memo(AddressSection);
+export default React.memo(styled(AddressSection)`
+  .via-identity .name {
+    font-size: 25px !important;
+    line-height: 1.7rem !important;
+    // color:red !important;
+  }
+`);

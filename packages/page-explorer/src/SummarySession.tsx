@@ -5,6 +5,7 @@ import type { DeriveSessionProgress } from '@axia-js/api-derive/types';
 import type { Forcing } from '@axia-js/types/interfaces';
 
 import React from 'react';
+import styled from 'styled-components';
 
 import { CardSummary } from '@axia-js/react-components';
 import { useApi, useCall } from '@axia-js/react-hooks';
@@ -91,4 +92,6 @@ function SummarySession ({ className, withEra = true, withSession = true }: Prop
   );
 }
 
-export default React.memo(SummarySession);
+export default React.memo(styled(SummarySession)`
+ 
+`);

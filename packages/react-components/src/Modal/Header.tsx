@@ -27,4 +27,15 @@ export default React.memo(styled(Header)`
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 1.5rem 0;
+  
+  .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+    background: #fff !important;
+    color: #000 !important;
+    border-radius:50% !important;
+  }
+  
+  h1{
+    text-transform:capitalize;
+    font-weight:600;
+  }
 `);

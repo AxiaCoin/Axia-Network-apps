@@ -21,6 +21,13 @@ export default React.memo(styled(Columns)`
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
+ 
+  p{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #777E91;
+  }
 
   &+& {
     margin-top: 0.25rem;
@@ -50,9 +57,13 @@ export default React.memo(styled(Columns)`
         box-sizing: border-box;
         display: block;
         flex: 0 34%;
-        font-size: 0.95rem;
+        // font-size: 0.95rem;
         opacity: 0.75;
         padding: 0.75rem 0 0.25rem 0.5rem;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: #777E91;
       }
     }
   }

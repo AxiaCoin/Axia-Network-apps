@@ -63,6 +63,7 @@ function PreImage ({ className = '', imageHash, isImminent = false, onClose }: P
       <Modal.Content>
         <Modal.Columns hint={t<string>('This account will pay the fees for the preimage, based on the size thereof.')}>
           <InputAddress
+            className='CustomDropdown'
             help={t<string>('The account you want to register the preimage from')}
             label={t<string>('send from account')}
             labelExtra={
@@ -83,12 +84,13 @@ function PreImage ({ className = '', imageHash, isImminent = false, onClose }: P
         }
         >
           <Extrinsic
+            className='CustomExtrinsic'
             defaultValue={apiDefaultTxSudo}
             label={t<string>('propose')}
             onChange={setProposal}
           />
           <Input
-            className='disabledLook'
+            className='disabledLook CustomDropdown'
             help={t<string>('The hash of the selected proposal, use it for submitting the proposal')}
             isDisabledError={!isMatched}
             label={t<string>('preimage hash')}
@@ -98,6 +100,7 @@ function PreImage ({ className = '', imageHash, isImminent = false, onClose }: P
         {!isImminent && (
           <Modal.Columns hint={t<string>('The calculated storage costs based on the size and the per-bytes fee.')}>
             <InputBalance
+              className='CustomDropdown CustomDropdown2'
               defaultValue={storageFee}
               help={t<string>('The amount reserved to store this image')}
               isDisabled
@@ -109,7 +112,7 @@ function PreImage ({ className = '', imageHash, isImminent = false, onClose }: P
       <Modal.Actions>
         <TxButton
           accountId={accountId}
-          icon='plus'
+          icon='plus-square'
           isDisabled={!proposal || !accountId || !isMatched || !encodedProposal}
           label={t<string>('Submit preimage')}
           onStart={onClose}
@@ -133,10 +136,33 @@ export default React.memo(styled(PreImage)`
 
   .disabledLook input {
     background: transparent;
-    border-style: dashed;
+    border-style: dashed !important;
     &:focus{
       background: transparent;
       border-color: #d9d8d7;
     }
   }
+
+  .CustomDropdown2 .ui.selection.dropdown{
+    border: 2px solid #B1B5C4 !important;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+  .CustomDropdown2 .ui.input>input{
+    border: 2px solid #B1B5C4 !important;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+
+  .CustomDropdown .ui.input>input{
+    border: 2px dashed #B1B5C4 !important;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+  .CustomDropdown .ui.selection.dropdown{
+    border: 2px solid #B1B5C4 !important;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+
 `);

@@ -31,15 +31,15 @@ function Summary ({ bestNumber, className = '', electionsInfo, hasElections }: P
   return (
     <SummaryBox className={className}>
       <section>
-        <CardSummary label={t<string>('seats')}>
+        <CardSummary className='CustomBg' label={t<string>('seats')}>
           {formatNumber(members.length)}{desiredSeats && <>&nbsp;/&nbsp;{formatNumber(desiredSeats)}</>}
         </CardSummary>
         {hasElections && (
           <>
-            <CardSummary label={t<string>('runners up')}>
+            <CardSummary className='CustomBg' label={t<string>('runners up')}>
               {formatNumber(runnersUp.length)}{desiredRunnersUp && <>&nbsp;/&nbsp;{formatNumber(desiredRunnersUp)}</>}
             </CardSummary>
-            <CardSummary label={t<string>('candidates')}>
+            <CardSummary className='CustomBg' label={t<string>('candidates')}>
               {formatNumber(candidateCount)}
             </CardSummary>
           </>
@@ -55,6 +55,7 @@ function Summary ({ bestNumber, className = '', electionsInfo, hasElections }: P
       {bestNumber && termDuration && termDuration.gt(BN_ZERO) && (
         <section>
           <CardSummary
+            className='CustomEcho'
             label={t<string>('term progress')}
             progress={{
               total: termDuration,

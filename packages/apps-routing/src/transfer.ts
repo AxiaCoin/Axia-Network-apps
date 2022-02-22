@@ -18,7 +18,7 @@ export default function create (t: TFunction): Route {
       ]
     },
     group: 'accounts',
-    icon: 'paper-plane',
+    icon: 'location-arrow',
     name: 'transfer',
     text: t('nav.transfer', 'Transfer', { ns: 'apps-routing' })
   };

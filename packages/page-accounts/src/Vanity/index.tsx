@@ -184,10 +184,10 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
 
   return (
     <div className={className}>
-      <div className='ui--row'>
+      <div className='ui--row CustomWidth'>
         <Input
           autoFocus
-          className='medium'
+          className='medium inputCustom'
           help={t<string>('Type here what you would like your address to contain. This tool will generate the keys and show the associated addresses that best match your search. ')}
           isDisabled={isRunning}
           isError={!isMatchValid}
@@ -197,7 +197,7 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
           value={match}
         />
         <Dropdown
-          className='medium'
+          className='medium inputCustom'
           help={t<string>('Should the search be case sensitive, e.g if you select "no" your search for "Some" may return addresses containing "somE" or "sOme"...')}
           isDisabled={isRunning}
           label={t<string>('case sensitive')}
@@ -206,9 +206,9 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
           value={withCase}
         />
       </div>
-      <div className='ui--row'>
+      <div className='ui--row CustomWidth'>
         <Dropdown
-          className='medium'
+          className='medium inputCustom'
           defaultValue={type}
           help={t<string>('Determines what cryptography will be used to create this account. Note that to validate on AXIA, the session account must use "ed25519".')}
           label={t<string>('keypair crypto type')}
@@ -216,14 +216,15 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
           options={isEthereum ? settings.availableCryptosEth : settings.availableCryptos}
         />
       </div>
-      <Button.Group>
+      <Button.Group className='customBtnBg'>
         <Button
           icon={
             isRunning
               ? 'stop'
-              : 'sign-in-alt'
+              : 'play-circle'
           }
           isDisabled={!isMatchValid}
+          className='customBtnBg'
           label={
             isRunning
               ? t<string>('Stop generation')
@@ -234,7 +235,7 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
       </Button.Group>
       {matches.length !== 0 && (
         <>
-          <article className='warning centered'>{t<string>('Ensure that you utilized the "Save" functionality before using a generated address to receive funds. Without saving the address any funds and the associated seed any funds sent to it will be lost.')}</article>
+          <article className='warning centered CustomArticleWidth'>{t<string>('Ensure that you utilized the "Save" functionality before using a generated address to receive funds. Without saving the address any funds and the associated seed any funds sent to it will be lost.')}</article>
           <Table
             className='vanity--App-matches'
             empty={t<string>('No matches found')}
@@ -274,4 +275,43 @@ export default React.memo(styled(VanityApp)`
     opacity: 0.45;
     text-align: center;
   }
+  .inputCustom input{
+    background: #FFFFFF;
+    border: 1px solid #B1B5C4;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+ .ui--Dropdown .selection {
+    background: #FFFFFF;
+    border: 1px solid #B1B5C4;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  .CustomWidth{
+    // width:90%;
+    margin:auto;
+  }
+  .ui--Button{
+    background: #178FE1;
+    border-radius: 12px;
+    color:#fff;
+    
+  }
+  .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+    background:#178FE1;
+    color:#fff;
+  }
+  .CustomArticleWidth{
+    width:45rem;
+  }
+  .lmHyKC tr:not(.filter) th{
+    color:#23262F !important;
+  }
+  .lmHyKC th h1{
+    color:#000;
+  }
+  .customBtnBg{
+    text-align:center !important;
+  }
+ 
 `);

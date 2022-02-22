@@ -9,6 +9,7 @@ import type { ITuple } from '@axia-js/types/types';
 import type { AddressFlags, AddressProxy } from './types';
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import styled from 'styled-components';
 
 import { ApiPromise } from '@axia-js/api';
 import { InputAddress, MarkError, Modal, Toggle } from '@axia-js/react-components';
@@ -218,7 +219,7 @@ function Address ({ currentItem, onChange, onEnter, passwordError, requestAddres
     <>
       <Modal.Columns hint={t('The sending account that will be used to send this transaction. Any applicable fees will be paid by this account.')}>
         <InputAddress
-          className='full'
+          className='full CustomDropdown'
           defaultValue={requestAddress}
           isDisabled
           isInput
@@ -294,4 +295,10 @@ function Address ({ currentItem, onChange, onEnter, passwordError, requestAddres
   );
 }
 
-export default React.memo(Address);
+export default React.memo(styled(Address)`
+  .CustomDropdown{
+    border: 2px dashed #B1B5C4 !important;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+`);

@@ -52,6 +52,6 @@ export default React.memo(styled(FilterOverlay)`
 
   /* hardcoded: var(--width-full) doesn't work in media */
   @media (max-width: 1750px) {
-    right: 1.5rem;
+    right: 7.5rem;
   }
 `);

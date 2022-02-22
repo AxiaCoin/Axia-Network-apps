@@ -72,7 +72,7 @@ export {
 export default React.memo(styled(AddressRow)`
   button.u.ui--Icon.editButton {
     padding: 0 .3em .3em .3em;
-    color: #2e86ab;
+    color: #178FE1;
     background: none;
     /*trick to let the button in the flow but keep the content centered regardless*/
     margin-left: -2em;

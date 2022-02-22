@@ -91,9 +91,18 @@ function Nominate ({ className = '', controllerId, nominating, onChange, stashId
 
 export default React.memo(styled(Nominate)`
   article.warning {
-    margin-top: 0;
+    border-color: rgba(255,196,12,1);
+    padding: 20px 24px !important;
+    margin-top: 20px;
+    background: #FFF8EC;
+    border: 1px solid #FFDE9E;
+    box-sizing: border-box;
+    border-radius: 12px;
   }
-
+  .ui.input > input{
+    height: 60px;
+    
+  }
   .auto--toggle {
     margin: 0.5rem 0 0;
     text-align: right;

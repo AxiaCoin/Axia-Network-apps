@@ -13,7 +13,7 @@ export default function create (t: TFunction): Route {
       needsApi: []
     },
     group: 'developer',
-    icon: 'network-wired',
+    icon: 'gem',
     name: 'rpc',
     text: t('nav.rpc', 'RPC calls', { ns: 'apps-routing' })
   };

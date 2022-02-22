@@ -13,7 +13,7 @@ export default function create (t: TFunction): Route {
       needsApi: []
     },
     group: 'network',
-    icon: 'braille',
+    icon: 'atlas',
     name: 'explorer',
     text: t('nav.explorer', 'Explorer', { ns: 'apps-routing' })
   };

@@ -178,7 +178,7 @@ function Query ({ className = '', onRemove, value }: Props): React.ReactElement<
       <div className='storage--actionrow-buttons'>
         <Button
           icon='times'
-          key='close'
+          key='close-square'
           onClick={_onRemove}
         />
       </div>
@@ -191,6 +191,7 @@ export default React.memo(styled(Query)`
 
   label {
     text-transform: none !important;
+    
   }
 
   .ui.disabled.dropdown.selection {
@@ -209,10 +210,25 @@ export default React.memo(styled(Query)`
     .ui--Param-text {
       overflow: hidden;
       text-overflow: ellipsis;
+      font-size: 16px;
     }
   }
-
-  .storage--actionrow-buttons {
-    margin-top: -0.25rem; /* offset parent spacing for buttons */
+  .storage--actionrow{
+    display: flex;
+    align-items : center !important;
   }
+  // .drpdwn-border{
+  //   background :red !important;
+
+  // }
+
+  // .storage--actionrow-buttons {
+  //   margin-top: -0.5rem; /* offset parent spacing for buttons */
+  // }
+  // .ui--DropdownLinked.ui--row .small .ui.selection.dropdown{
+  //   border:2px solid red;
+  //   border:12px;
+  //   border-top-right-radius:0px;
+  //   border-bottom-right-radius:0px;
+  // }
 `);

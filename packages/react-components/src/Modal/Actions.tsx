@@ -23,6 +23,6 @@ export default React.memo(styled(Actions)`
   border-radius: 0 0 4px 4px;
 
   .ui--Button-Group {
-    margin: 1rem 1rem;
+    margin: 1rem -12px;
   }
 `);

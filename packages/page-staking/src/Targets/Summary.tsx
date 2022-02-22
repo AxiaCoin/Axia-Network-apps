@@ -70,6 +70,7 @@ function Summary ({ avgStaked, lowStaked, minNominated, minNominatorBond, staked
           <CardSummary
             label={t<string>('total staked')}
             progress={progressStake}
+            className='CustomEcho'
           >
             <FormatBalance
               value={totalStaked}
@@ -80,7 +81,7 @@ function Summary ({ avgStaked, lowStaked, minNominated, minNominatorBond, staked
       </section>
       <section className='media--800'>
         {totalIssuance && (stakedReturn > 0) && Number.isFinite(stakedReturn) && (
-          <CardSummary label={t<string>('returns')}>
+          <CardSummary  label={t<string>('returns')}>
             {stakedReturn.toFixed(1)}%
           </CardSummary>
         )}
@@ -90,6 +91,7 @@ function Summary ({ avgStaked, lowStaked, minNominated, minNominatorBond, staked
           <CardSummary
             label={`${t<string>('lowest / avg staked')}`}
             progress={progressAvg}
+            className='CustomEcho'
           >
             <FormatBalance
               value={lowStaked}
@@ -107,7 +109,7 @@ function Summary ({ avgStaked, lowStaked, minNominated, minNominatorBond, staked
       <section className='media--1600'>
         {minNominated?.gt(BN_ZERO) && (
           <CardSummary
-            className='media--1600'
+            className='media--1600 '
             label={
               minNominatorBond
                 ? t<string>('min nominated / threshold')

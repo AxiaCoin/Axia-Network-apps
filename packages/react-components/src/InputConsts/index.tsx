@@ -6,7 +6,7 @@ import type { DropdownOptions } from '../util/types';
 import type { ConstValue, ConstValueBase } from './types';
 
 import React, { useCallback, useState } from 'react';
-
+import styled from 'styled-components';
 import { ApiPromise } from '@axia-js/api';
 import { useApi } from '@axia-js/react-hooks';
 
@@ -83,13 +83,13 @@ function InputConsts ({ className = '', defaultValue, help, label, onChange, wit
       withLabel={withLabel}
     >
       <SelectSection
-        className='small'
+        className='small CustomSmall'
         onChange={_onSectionChange}
         options={optionsSection}
         value={value}
       />
       <SelectKey
-        className='large'
+        className='large CustomLarge'
         onChange={_onKeyChange}
         options={optionsMethod}
         value={value}
@@ -98,4 +98,15 @@ function InputConsts ({ className = '', defaultValue, help, label, onChange, wit
   );
 }
 
-export default React.memo(InputConsts);
+export default React.memo(styled(InputConsts)`
+  .CustomSmall .ui.selection.dropdown{
+    border: 2px solid #B1B5C4;
+    border-radius: 12px 0px 0px 12px !important;
+    border-right-style: inset !important;
+  }
+  .CustomLarge .ui.selection.dropdown{
+    border: 2px solid #B1B5C4;
+    border-radius: 0px 12px 12px 0px !important;
+    border-left-style: 0 !important;
+  }
+`);

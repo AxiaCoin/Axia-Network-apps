@@ -108,8 +108,8 @@ function Expander ({ children, className = '', help, helpIcon, isOpen, isPadded,
           color={hasContent ? undefined : 'transparent'}
           icon={
             isExpanded
-              ? 'caret-up'
-              : 'caret-down'
+              ? 'chevron-up'
+              : 'chevron-down'
           }
         />
       </div>
@@ -155,6 +155,9 @@ export default React.memo(styled(Expander)`
     margin: 0;
     min-width: 13.5rem;
     overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     .ui--Expander-summary-header {
       display: inline-block;
@@ -172,6 +175,7 @@ export default React.memo(styled(Expander)`
     .ui--Icon {
       margin-left: 0.75rem;
       vertical-align: middle;
+      font-size:10px;
     }
 
     .ui--LabelHelp {

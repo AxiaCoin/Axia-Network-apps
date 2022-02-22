@@ -36,7 +36,7 @@ function TipCreate ({ members }: Props): React.ReactElement<Props> {
   return (
     <>
       <Button
-        icon='plus'
+        icon='plus-square'
         label={t<string>('Propose tip')}
         onClick={toggleOpen}
       />

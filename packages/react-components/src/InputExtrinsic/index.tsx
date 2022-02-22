@@ -5,6 +5,7 @@ import type { SubmittableExtrinsicFunction } from '@axia-js/api/types';
 import type { DropdownOptions } from '../util/types';
 
 import React, { useCallback, useState } from 'react';
+import styled from 'styled-components';
 
 import { useApi } from '@axia-js/react-hooks';
 
@@ -67,7 +68,7 @@ function InputExtrinsic ({ className = '', defaultValue, help, isDisabled, label
       withLabel={withLabel}
     >
       <SelectSection
-        className='small'
+        className='small CustomSmall'
         defaultValue={isDisabled ? value.section : undefined}
         isDisabled={isDisabled}
         onChange={isDisabled ? undefined : _onSectionChange}
@@ -76,7 +77,7 @@ function InputExtrinsic ({ className = '', defaultValue, help, isDisabled, label
       />
       <SelectMethod
         api={api}
-        className='large'
+        className='large CustomLarge'
         defaultValue={isDisabled ? value.method : undefined}
         isDisabled={isDisabled}
         onChange={isDisabled ? undefined : _onKeyChange}
@@ -87,4 +88,15 @@ function InputExtrinsic ({ className = '', defaultValue, help, isDisabled, label
   );
 }
 
-export default React.memo(InputExtrinsic);
+export default React.memo(styled(InputExtrinsic)`
+  .CustomSmall .ui.selection.dropdown{
+    border: 2px solid #B1B5C4;
+    border-radius: 12px 0px 0px 12px !important;
+    border-right-style: inset !important;
+  }
+  .CustomLarge .ui.selection.dropdown{
+    border: 2px solid #B1B5C4;
+    border-radius: 0px 12px 12px 0px !important;
+    border-left-style: 0 !important;
+  }
+`);

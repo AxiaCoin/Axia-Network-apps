@@ -270,7 +270,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
     createMenuGroup('deriveGroup', [
       !(isExternal || isHardware || isInjected || isMultisig) && (
         <Menu.Item
-          icon='download'
+          icon='link'
           key='deriveAccount'
           onClick={toggleDerive}
         >
@@ -644,7 +644,7 @@ function Account ({ account: { address, meta }, className = '', delegation, filt
             {isFunction(api.api.tx.balances?.transfer) && (
               <Button
                 className='send-button'
-                icon='paper-plane'
+                icon='location-arrow'
                 label={t<string>('send')}
                 onClick={toggleTransfer}
               />

@@ -255,7 +255,7 @@ function createBalanceItems (formatIndex: number, lookup: Record<string, string>
         formatIndex={formatIndex}
         labelPost={
           <Icon
-            icon='info-circle'
+            icon='question-circle'
             tooltip={`${address}-vested-trigger`}
           />
         }
@@ -295,7 +295,7 @@ function createBalanceItems (formatIndex: number, lookup: Record<string, string>
         formatIndex={formatIndex}
         labelPost={
           <Icon
-            icon='info-circle'
+            icon='question-circle'
             tooltip={`${address}-locks-trigger`}
           />
         }
@@ -559,6 +559,9 @@ export default withMulti(
           }
         }
       }
+    }
+    .cTPBgL .ui--Icon{
+      color:#777E91 !important;
     }
   `,
   withCalls<Props>(

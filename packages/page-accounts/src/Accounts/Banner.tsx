@@ -12,7 +12,7 @@ interface Props {
 
 function Banner ({ children, className = '', type }: Props): React.ReactElement<Props> | null {
   return (
-    <article className={`${className} ${type} centered`}>
+    <article className={`${className} ${type} centered BorderColor`}>
       <div className='box'>
         {children}
       </div>
@@ -22,6 +22,6 @@ function Banner ({ children, className = '', type }: Props): React.ReactElement<
 
 export default React.memo(styled(Banner)`
   .box {
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.5rem;
   }
 `);

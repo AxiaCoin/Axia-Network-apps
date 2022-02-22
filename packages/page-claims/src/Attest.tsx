@@ -117,7 +117,7 @@ function Attest ({ accountId, className, ethereumAddress, onSuccess, statementKi
         <Button.Group>
           <TxButton
             accountId={accountId}
-            icon='paper-plane'
+            icon='location-arrow'
             isDisabled={!statementSentence}
             label={t<string>('I agree')}
             onSuccess={onSuccess}

@@ -65,6 +65,10 @@ export default React.memo(styled(MonthDay)`
     cursor: pointer;
   }
 
+  &.isSelected{
+    color:#23262F !important;
+  }
+
   &:not(.isSelected):hover {
     background: #f7f5f3;
   }

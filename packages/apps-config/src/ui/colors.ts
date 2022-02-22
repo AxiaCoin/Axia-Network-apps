@@ -18,14 +18,12 @@ const emptyColor = '#99999';
 const chainAxccanarynet = '#F6C94A';
 const chainChainx = '#F6C94A';
 const chainAXIA = '#e6007a';
-const chainPontem = '#A92FAC';
 const chainAxctestnet = '#A92FAC';
 
 
 const nodeAxccanarynet = '#F6C94A';
 const nodeChainx = '#F6C94A';
 const nodeAXIA = '#e6007a';
-const nodePontem = '#A92FAC';
 const nodeAxctestnet = '#A92FAC';
 
 
@@ -45,7 +43,6 @@ export const chainColors: Record<string, string> = Object.entries({
       
   ChainX: chainChainx,
   AXIA: chainAXIA,
-  'Pontem Testnet': chainPontem,
   axctestnet: chainAxctestnet,
   axccanarynet: chainAxccanarynet,
 
@@ -59,7 +56,6 @@ export const chainColors: Record<string, string> = Object.entries({
 export const nodeColors = Object.entries({
 
   ChainX: nodeChainx,
-  'Pontem Testnet': nodePontem,
   axctestnet: nodeAxctestnet,
   axccanarynet: nodeAxccanarynet,
 

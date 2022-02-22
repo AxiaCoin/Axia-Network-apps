@@ -95,7 +95,7 @@ function NewNominator ({ isInElection, targets }: Props): React.ReactElement<Pro
           </Modal.Content>
           <Modal.Actions>
             <Button
-              icon='step-backward'
+              icon='arrow-left'
               isDisabled={step === 1}
               label={t<string>('prev')}
               onClick={_prevStep}
@@ -118,7 +118,7 @@ function NewNominator ({ isInElection, targets }: Props): React.ReactElement<Pro
               )
               : (
                 <Button
-                  icon='step-forward'
+                  icon='arrow-right'
                   isDisabled={!bondTx}
                   label={t<string>('next')}
                   onClick={_nextStep}

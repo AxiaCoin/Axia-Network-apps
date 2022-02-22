@@ -41,8 +41,9 @@ export default (_theme: ThemeDef): string => `
   .ui.dropdown {
     &.disabled {
       background: transparent;
-      border-style: dashed;
+      border-style: dashed !important;
       opacity: 1;
+      border:2px dashed #B1B5C3;
 
       .dropdown.icon {
         opacity: 0;
@@ -91,7 +92,8 @@ export default (_theme: ThemeDef): string => `
 
       input {
         background: transparent;
-        border-style: dashed;
+        border-style: dashed ;
+        border:2px dashed #B1B5C3;
       }
 
       .ui.primary.buttons .ui.button {
@@ -107,8 +109,12 @@ export default (_theme: ThemeDef): string => `
     }
 
     &.error input {
-      background-color: var(--bg-input-error);
-      border-color: #e0b4b4;
+      background-color: #fff;
+      // border-color: #e0b4b4;
+      border:2px solid red ;
+      border-radius:12px;
+      text-transform:capitalize;
+      // border-right-color:red;
     }
 
     > input {

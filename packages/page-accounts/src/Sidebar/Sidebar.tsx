@@ -249,7 +249,11 @@ export default React.memo(styled(FullSidebar)`
   .ui--AddressMenu-buttons {
     .ui--Button-Group {
       margin-bottom: 0;
+      font-weight: 500;
+      font-size: 14px;
+      color: #178FE1;
     }
+
   }
 
   .ui--AddressMenu-tags,

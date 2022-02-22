@@ -108,6 +108,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
         <div className={className}>
           <Modal.Columns hint={t<string>('The transferred balance will be subtracted (along with fees) from the sender account.')}>
             <InputAddress
+              className='CustomDropdown'
               defaultValue={propSenderId}
               help={t<string>('The account you will send funds from.')}
               isDisabled={!!propSenderId}
@@ -124,6 +125,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
           </Modal.Columns>
           <Modal.Columns hint={t<string>('The beneficiary will have access to the transferred fees when the transaction is included in a block.')}>
             <InputAddress
+              className='CustomDropdown2'
               defaultValue={propRecipientId}
               help={t<string>('Select a contact or paste the address you want to send funds to.')}
               isDisabled={!!propRecipientId}
@@ -145,6 +147,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
             {canToggleAll && isAll
               ? (
                 <InputBalance
+                 
                   autoFocus
                   defaultValue={maxTransfer}
                   help={t<string>('The full account balance to be transferred, minus the transaction fees')}
@@ -156,6 +159,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
               : (
                 <>
                   <InputBalance
+                    className='CustomDropdown3'
                     autoFocus
                     help={t<string>('Type the amount you want to transfer. Note that you can select the unit on the right e.g sending 1 milli is equivalent to sending 0.001.')}
                     isError={!hasAvailable}
@@ -165,6 +169,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
                     onChange={setAmount}
                   />
                   <InputBalance
+                   className='CustomDropdown4'
                     defaultValue={api.consts.balances.existentialDeposit}
                     help={t<string>('The minimum amount that an account should have to be deemed active')}
                     isDisabled
@@ -190,24 +195,24 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
             {canToggleAll && (
               <Toggle
                 className='typeToggle'
-                label={t<string>('Transfer the full account balance, reap the sender')}
+                label={t<string>('Normal transfer without keep-alive checks')}
                 onChange={setIsAll}
                 value={isAll}
               />
             )}
+            
             {!isProtected && !noReference && (
               <MarkWarning content={t<string>('There is an existing reference count on the sender account. As such the account cannot be reaped from the state.')} />
             )}
-            {noFees && (
-              <MarkWarning content={t<string>('The transaction, after application of the transfer fees, will drop the available balance below the existential deposit. As such the transfer will fail. The account needs more free funds to cover the transaction fees.')} />
-            )}
+            
           </Modal.Columns>
         </div>
       </Modal.Content>
       <Modal.Actions>
         <TxButton
+        className='CustomBtn'
           accountId={propSenderId || senderId}
-          icon='paper-plane'
+          icon='location-arrow'
           isDisabled={!hasAvailable || !(propRecipientId || recipientId) || !amount || !!recipientPhish}
           label={t<string>('Make Transfer')}
           onStart={onClose}
@@ -244,5 +249,20 @@ export default React.memo(styled(Transfer)`
 
   .typeToggle+.typeToggle {
     margin-top: 0.375rem;
+  }
+
+  .ui.action.input>.button, .ui.action.input>.buttons>.button{
+    border:2px solid #B1B5C4 !important;
+    border-radius: 12px !important;
+  }
+
+  .BvuJb > label, .BvuJb > div{
+    color: #353945 !important;
+  }
+  .ui.action.input:not([class*="left action"])>input{
+    border-bottom-right-radius: 12px !important;
+    border-right-color: #B1B5C4 !important;
+    margin-right: 5px !important;
+    border-top-right-radius:12px !important;
   }
 `);

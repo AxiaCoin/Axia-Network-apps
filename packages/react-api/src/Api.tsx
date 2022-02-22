@@ -7,7 +7,6 @@ import type { ChainProperties, ChainType } from '@axia-js/types/interfaces';
 import type { KeyringStore } from '@axia-js/ui-keyring/types';
 import type { ApiProps, ApiState } from './types';
 
-import { Detector } from '@axlib/connect';
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import store from 'store';
 
@@ -193,16 +192,7 @@ function Api ({ apiUrl, children, store }: Props): React.ReactElement<Props> | n
 
   // initial initialization
   useEffect((): void => {
-    let provider;
-
-    if (apiUrl.startsWith('light://')) {
-      const detect = new Detector('axia-js/apps');
-
-      provider = detect.provider(apiUrl.replace('light://axlib-connect/', ''));
-      provider.connect().catch(console.error);
-    } else {
-      provider = new WsProvider(apiUrl);
-    }
+    let provider = new WsProvider(apiUrl);
 
     const signer = new ApiSigner(registry, queuePayload, queueSetTxStatus);
     const types = getDevTypes();

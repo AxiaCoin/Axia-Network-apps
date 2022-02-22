@@ -64,7 +64,7 @@ export default React.memo(styled(Icon)`
   }
 
   &.greenColor {
-    color: green;
+    color: #35B994;
   }
 
   &.orangeColor {
@@ -72,7 +72,7 @@ export default React.memo(styled(Icon)`
   }
 
   &.redColor {
-    color: darkred;
+    color: #F12F2F;
   }
 
   &.transparentColor {

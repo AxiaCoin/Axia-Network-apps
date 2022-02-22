@@ -37,8 +37,8 @@ function getContrast (uiHighlight: string | undefined): string {
   const brightness = countBrightness(uiHighlight);
 
   return brightness > BRIGHTNESS
-    ? 'rgba(45, 43, 41, 0.875)'
-    : 'rgba(255, 253, 251, 0.875)';
+    ? '#45A5E7'
+    : '#fff';
 }
 
 function getMenuHoverContrast (uiHighlight: string | undefined): string {
@@ -49,7 +49,7 @@ function getMenuHoverContrast (uiHighlight: string | undefined): string {
   }
 
   return brightness < BRIGHTNESS
-    ? 'rgba(0, 0, 0, 0.15)'
+    ? '#45A5E7'
     : 'rgba(255, 255, 255, 0.15)';
 }
 
@@ -204,8 +204,9 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
     &:not(.isDisabled):not(.isIcon):not(.isBasic),
     &.withoutLink:not(.isDisabled) {
       .ui--Icon {
-        background: ${getHighlight(uiHighlight)};
-        color: ${getContrast(uiHighlight)};
+        background: #178FE1;
+        color:#fff;
+        // font-weight:800;
       }
     }
 
@@ -226,7 +227,7 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
     &:hover:not(.isDisabled):not(.isReadOnly),
     &.isSelected {
       background: ${getHighlight(uiHighlight)};
-      color: ${getContrast(uiHighlight)};
+      color: ${getContrast(uiHighlight)} !important;
       text-shadow: none;
 
       &:not(.isIcon),
@@ -268,7 +269,7 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
 
   .ui--Menu {
     .ui--Menu__Item:hover {
-       background: ${hexToRGB(getHighlight(uiHighlight), '.1')};
+       background: ${hexToRGB(getHighlight(uiHighlight))};
     }
 
     .ui--Toggle.isChecked .ui--Toggle-Slider {
@@ -329,10 +330,10 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
     .ui--Toggle.isChecked {
       &:not(.isRadio) {
         .ui--Toggle-Slider {
-          background: ${getHighlight(uiHighlight)} !important;
+          background: #35B994 !important;
 
           &:before {
-            border-color: ${getHighlight(uiHighlight)} !important;
+            border-color: #35B994 !important;
           }
         }
       }
@@ -370,14 +371,19 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
   }
 
   article {
-    background: var(--bg-table);
-    border: 1px solid #f2f2f2;
-    border-radius: 0.25rem;
+    // background: var(--bg-table);
+    // border: 1px solid #f2f2f2;
+    // border-radius: 0.25rem;
+    background: #fff;
+    // border: 1px solid #FFDE9E;
+    // border-radius: 12px;
     box-sizing: border-box;
     margin: 0.25rem;
     padding: 1.25rem;
     position: relative;
     text-align: left;
+    box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.08);
+    border-radius: 20px;
 
     > ul {
       margin: 0;
@@ -386,7 +392,7 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
 
     &.error,
     &.warning {
-      border-left-width: 0.25rem;
+      // border-left-width: 0.25rem;
       line-height: 1.5;
       margin-left: 2.25rem;
       padding: 0.75rem 1rem;
@@ -420,7 +426,7 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
 
     &.centered {
       margin: 1.5rem auto;
-      max-width: 75rem;
+      max-width: 92rem;
 
       &+.ui--Button-Group {
         margin-top: 2rem;
@@ -488,7 +494,7 @@ export default createGlobalStyle<Props & ThemeProps>(({ theme, uiHighlight }: Pr
   h1, h2, h3, h4, h5 {
     color: var(--color-summary);
     font: var(--font-sans);
-    font-weight: var(--font-weight-light);
+    font-weight: 500;
     margin-bottom: 0.25rem;
   }
 

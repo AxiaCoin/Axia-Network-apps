@@ -47,17 +47,18 @@ function BaseOverlay ({ children, className = '', icon, type }: Props): React.Re
 }
 
 export default React.memo(styled(BaseOverlay)`
-  background: var(--bg-menu);
+  background: #FFF8EC;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  border-left-width: 0.25rem;
+  border-radius: 12px;
   line-height: 1.5em;
   padding: 0 1rem;
-  position: fixed;
+  // position: fixed;
   right: 0.75rem;
   top: 0.75rem;
   max-width: 55rem;
+  margin:auto;
   z-index: 500;
+  margin-top:10px;
 
   &:before {
     border-radius: 0.25rem;
@@ -92,6 +93,7 @@ export default React.memo(styled(BaseOverlay)`
     max-width: 50rem;
     padding: 1em 3rem 1rem 0.5rem;
     position: relative;
+    align-items:center;
 
     .contentIcon {
       flex: 0;
@@ -112,5 +114,7 @@ export default React.memo(styled(BaseOverlay)`
     position: absolute;
     right: 0em;
     top: 0.75rem;
+    background: transparent;
+    box-shadow: none !important;
   }
 `);

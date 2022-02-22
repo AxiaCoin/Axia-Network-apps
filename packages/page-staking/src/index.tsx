@@ -167,9 +167,9 @@ function StakingApp ({ basePath, className = '' }: Props): React.ReactElement<Pr
         ownStashes={ownStashes}
         targets={targets}
       />
-      {basePath === pathname && hasAccounts && (ownStashes?.length === 0) && (
+      {/* {basePath === pathname && hasAccounts && (ownStashes?.length === 0) && (
         <ActionsBanner />
-      )}
+      )} */}
       <Overview
         className={basePath === pathname ? '' : 'staking--hidden'}
         favorites={favorites}

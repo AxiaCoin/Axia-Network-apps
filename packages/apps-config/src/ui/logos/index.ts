@@ -13,7 +13,6 @@ import { sanitize } from '../util';
 import nodeAxccanarynet from './nodes/axccanarynet.svg';
 import nodeChainx from './nodes/chainx.svg';
 
-import nodePontem from './nodes/pontem.svg';
 import nodeAxctestnet from './nodes/axctestnet.svg';
 
 import emptyLogo from './empty.svg';
@@ -25,7 +24,6 @@ import emptyLogo from './empty.svg';
 export const chainLogos = Object.entries({
 
    ChainX: nodeChainx,
-  'Pontem Testnet': nodePontem,
    axctestnet: nodeAxctestnet,
    axccanarynet: nodeAxccanarynet,
 
@@ -39,7 +37,6 @@ export const chainLogos = Object.entries({
 export const nodeLogos = Object.entries({
 
    ChainX: nodeChainx,
-   'Pontem Testnet': nodePontem,
    axctestnet: nodeAxctestnet,
    axccanarynet: nodeAxccanarynet,
    empty: emptyLogo,
@@ -63,7 +60,6 @@ export const specLogos = Object.entries({
 export const namedLogos: Record<string, unknown> = {
       
   chainx: nodeChainx,
-  pontem: nodePontem,
   axctestnet: nodeAxctestnet,
   axccanarynet: nodeAxccanarynet,
 

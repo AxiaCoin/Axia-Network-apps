@@ -4,6 +4,7 @@
 import type { DeriveReferendumExt } from '@axia-js/api-derive/types';
 
 import React from 'react';
+import styled from 'styled-components';
 
 import { Button } from '@axia-js/react-components';
 import { useApi, useCall, useToggle } from '@axia-js/react-hooks';
@@ -55,4 +56,13 @@ function Overview ({ className }: Props): React.ReactElement<Props> {
   );
 }
 
-export default React.memo(Overview);
+export default React.memo(styled(Overview)`
+    .ui--Button{
+      color: #178FE1 !important;
+      font-weight:500 !important;
+    }
+    .ui--Button:hover{
+      color: #fff !important;
+      font-weight:500 !important;
+    }
+`);

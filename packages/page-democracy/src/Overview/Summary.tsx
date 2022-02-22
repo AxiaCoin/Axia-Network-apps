@@ -32,24 +32,25 @@ function Summary ({ referendumCount }: Props): React.ReactElement<Props> {
   return (
     <SummaryBox>
       <section>
-        <CardSummary label={t<string>('proposals')}>
+        <CardSummary className='CustomBg' label={t<string>('proposals')}>
           {formatNumber(activeProposals?.length)}
         </CardSummary>
-        <CardSummary label={t<string>('total')}>
+        <CardSummary className='CustomBg' label={t<string>('total')}>
           {formatNumber(publicPropCount)}
         </CardSummary>
       </section>
       <section>
-        <CardSummary label={t<string>('referenda')}>
+        <CardSummary className='CustomBg' label={t<string>('referenda')}>
           {formatNumber(referendumCount || 0)}
         </CardSummary>
-        <CardSummary label={t<string>('total')}>
+        <CardSummary className='CustomBg' label={t<string>('total')}>
           {formatNumber(referendumTotal || 0)}
         </CardSummary>
       </section>
       {bestNumber && (
         <section className='media--1100'>
           <CardSummary
+            className='CustomEcho'
             label={t<string>('launch period')}
             progress={{
               total: api.consts.democracy.launchPeriod,

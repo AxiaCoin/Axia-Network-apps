@@ -11,7 +11,7 @@ export default function create (t: TFunction): Route {
     Component,
     display: {},
     group: 'settings',
-    icon: 'cogs',
+    icon: 'cog',
     name: 'settings',
     text: t('nav.settings', 'Settings', { ns: 'apps-routing' }),
     useCounter

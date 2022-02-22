@@ -39,7 +39,7 @@ export default React.memo(styled(NodeInfo)`
   text-align: right;
 
   > div {
-    margin-bottom: -0.125em;
+    // margin-bottom: -0.125em;
 
     > div {
       display: inline-block;

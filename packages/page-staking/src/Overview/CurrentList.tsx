@@ -7,6 +7,7 @@ import type { AccountId } from '@axia-js/types/interfaces';
 import type { SortedTargets, ValidatorInfo } from '../types';
 
 import React, { useContext, useMemo, useRef, useState } from 'react';
+import styled from 'styled-components';
 
 import { Table } from '@axia-js/react-components';
 import { useApi, useCall, useLoadingDelay, useSavedFlags } from '@axia-js/react-hooks';
@@ -147,7 +148,7 @@ function CurrentList ({ favorites, hasQueries, isIntentions, paraValidators = DE
       }
       header={headerRef.current}
       legend={
-        <Legend isRelay={!isIntentions && !!(api.query.parasShared || api.query.shared)?.activeValidatorIndices} />
+        <Legend className='CustomBg' isRelay={!isIntentions && !!(api.query.parasShared || api.query.shared)?.activeValidatorIndices} />
       }
     >
       {!isLoading && (
@@ -178,4 +179,18 @@ function CurrentList ({ favorites, hasQueries, isIntentions, paraValidators = DE
   );
 }
 
-export default React.memo(CurrentList);
+export default React.memo(styled(CurrentList)`
+.filtering{
+  display: flex!important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.CustomDisplay{
+  width:50% !important;
+}
+.staking--optionsBar{
+  width:50%;
+}
+
+`);

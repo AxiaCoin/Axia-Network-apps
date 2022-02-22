@@ -48,7 +48,7 @@ export default React.memo(styled(Holder)`
 
   .ui--Params-Content {
     box-sizing: border-box;
-    padding: 0 0 0 1.75rem;
+    // padding: 0 0 0 1.75rem;
   }
 
   .ui--Param-text {

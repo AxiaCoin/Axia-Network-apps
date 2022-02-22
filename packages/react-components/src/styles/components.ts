@@ -6,20 +6,26 @@ import type { ThemeDef } from '../types';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default (_theme: ThemeDef): string => `
   .ui--output {
+    height: 100%;
     background: var(--bg-input);
-    border-radius: 4px;
-    border: 1px dashed #eee;
+    border-radius: 12px;
+    border: 2px solid #B1B5C4;
     box-sizing: border-box;
     line-height: 1rem;
-    max-height: 25rem;
-    overflow-y: auto;
     padding: 0.75rem 1rem;
     position: relative;
     word-break: break-all;
 
     &.error {
-      background: var(--bg-input-error);
+      background: #fff;
       border-color: #e0b4b4;
+      border:2px solid red;
+      border-radius:12px;
+      border-right-color:red !important;
+      border-bottom-right-radius: 12px !important;
+      margin-right: 5px !important;
+        
+      
     }
 
     &.monospace {
@@ -54,9 +60,9 @@ export default (_theme: ThemeDef): string => `
 
   .ui--DropdownLinked.ui--row {
     .small .ui.selection.dropdown {
-      border-right: none;
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
+      // border-right: none;
+      // border-bottom-right-radius: 0;
+      // border-top-right-radius: 0;
       min-width: 5rem;
     }
 
@@ -101,6 +107,10 @@ export default (_theme: ThemeDef): string => `
     .ui--SiDropdown {
       width: 6rem;
       text-align: center;
+      border:2px solid #B1B5C3 !important;
+      color: #666 !important;
+      cursor: default !important;
+      border-radius: 0px 12px 12px 0px !important;
     }
   }
 

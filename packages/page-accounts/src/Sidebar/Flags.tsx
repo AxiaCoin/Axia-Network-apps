@@ -110,7 +110,7 @@ export default React.memo(styled(Flags)`
   h5 {
     text-align: left;
     font-style: normal;
-    font-weight: var(--font-weight-bold);
+    font-weight: 600;
     font-size: 0.714rem;
     line-height: 1rem;
     text-transform: uppercase;

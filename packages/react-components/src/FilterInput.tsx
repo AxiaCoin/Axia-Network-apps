@@ -28,7 +28,7 @@ function Filter ({ className = '', filterOn, label, setFilter }: Props) {
 }
 
 export default React.memo(styled(Filter)`
-  width: 29.5rem;
+  width: 18.5rem;
 
   :not(:only-child) {
     margin-left: 1.5rem;
@@ -38,4 +38,5 @@ export default React.memo(styled(Filter)`
     margin: 0;
     height: 3.893rem;
   }
+ 
 `);

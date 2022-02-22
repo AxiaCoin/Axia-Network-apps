@@ -7,6 +7,7 @@ import type { QueryableStorageEntry } from '@axia-js/api/types';
 import type { DropdownOptions } from '../util/types';
 
 import React, { useCallback, useState } from 'react';
+import styled from 'styled-components';
 
 import { useApi } from '@axia-js/react-hooks';
 
@@ -29,7 +30,13 @@ interface Props {
 function InputStorage ({ className = '', defaultValue, help, label, onChange, withLabel }: Props): React.ReactElement<Props> {
   const { api } = useApi();
   const [optionsMethod, setOptionsMethod] = useState<DropdownOptions>(() => keyOptions(api, defaultValue.creator.section));
-  const [optionsSection] = useState<DropdownOptions>(() => sectionOptions(api));
+  const [optionsSection] = useState<DropdownOptions>(() => {
+    const options = sectionOptions(api).filter((option) => {
+      if (option.text && !option.text.toString().includes('para')) return option;
+    });
+
+    return options;
+  });
   const [value, setValue] = useState<QueryableStorageEntry<'promise'>>(() => defaultValue);
 
   const _onKeyChange = useCallback(
@@ -63,13 +70,13 @@ function InputStorage ({ className = '', defaultValue, help, label, onChange, wi
       withLabel={withLabel}
     >
       <SelectSection
-        className='small'
+        className='small CustomSmall'
         onChange={_onSectionChange}
         options={optionsSection}
         value={value}
       />
       <SelectKey
-        className='large'
+        className='large CustomLarge'
         onChange={_onKeyChange}
         options={optionsMethod}
         value={value}
@@ -78,4 +85,15 @@ function InputStorage ({ className = '', defaultValue, help, label, onChange, wi
   );
 }
 
-export default React.memo(InputStorage);
+export default React.memo(styled(InputStorage)`
+.CustomSmall .ui.selection.dropdown{
+  border: 2px solid #B1B5C4;
+  border-radius: 12px 0px 0px 12px !important;
+  border-right-style: inset !important;
+}
+.CustomLarge .ui.selection.dropdown{
+  border: 2px solid #B1B5C4;
+  border-radius: 0px 12px 12px 0px !important;
+  border-left-style: 0 !important;
+}
+`);

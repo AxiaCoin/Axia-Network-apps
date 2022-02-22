@@ -303,47 +303,50 @@ function Targets ({ className = '', isInElection, ownStashes, targets: { avgStak
         setWithIdentity={setToggle.withIdentity}
         withIdentity={toggles.withIdentity}
       >
-        <Toggle
-          className='staking--buttonToggle'
-          label={t<string>('single from operator')}
-          onChange={setToggle.withGroup}
-          value={toggles.withGroup}
-        />
-        <Toggle
-          className='staking--buttonToggle'
-          label={
-            MAX_COMM_PERCENT > 0
-              ? t<string>('no {{maxComm}}%+ comm', { replace: { maxComm: MAX_COMM_PERCENT } })
-              : t<string>('no median+ comm')
-          }
-          onChange={setToggle.withoutComm}
-          value={toggles.withoutComm}
-        />
-        <Toggle
-          className='staking--buttonToggle'
-          label={
-            MAX_CAP_PERCENT < 100
-              ? t<string>('no {{maxCap}}%+ capacity', { replace: { maxCap: MAX_CAP_PERCENT } })
-              : t<string>('no at capacity')
-          }
-          onChange={setToggle.withoutOver}
-          value={toggles.withoutOver}
-        />
-        {api.consts.babe && (
-          // FIXME have some sane era defaults for Aura
+        <div>
           <Toggle
             className='staking--buttonToggle'
-            label={t<string>('recent payouts')}
-            onChange={setToggle.withPayout}
-            value={toggles.withPayout}
+            label={t<string>('single from operator')}
+            onChange={setToggle.withGroup}
+            value={toggles.withGroup}
           />
-        )}
-        <Toggle
-          className='staking--buttonToggle'
-          label={t<string>('only elected')}
-          onChange={setToggle.withElected}
-          value={toggles.withElected}
-        />
+          <Toggle
+            className='staking--buttonToggle'
+            label={
+              MAX_COMM_PERCENT > 0
+                ? t<string>('no {{maxComm}}%+ comm', { replace: { maxComm: MAX_COMM_PERCENT } })
+                : t<string>('no median+ comm')
+            }
+            onChange={setToggle.withoutComm}
+            value={toggles.withoutComm}
+          />
+          <Toggle
+            className='staking--buttonToggle'
+            label={
+              MAX_CAP_PERCENT < 100
+                ? t<string>('no {{maxCap}}%+ capacity', { replace: { maxCap: MAX_CAP_PERCENT } })
+                : t<string>('no at capacity')
+            }
+            onChange={setToggle.withoutOver}
+            value={toggles.withoutOver}
+          />
+          {api.consts.babe && (
+            // FIXME have some sane era defaults for Aura
+            <Toggle
+              className='staking--buttonToggle'
+              label={t<string>('recent payouts')}
+              onChange={setToggle.withPayout}
+              value={toggles.withPayout}
+            />
+          )}
+          <Toggle
+            className='staking--buttonToggle'
+            label={t<string>('only elected')}
+            onChange={setToggle.withElected}
+            value={toggles.withElected}
+          />
+        </div>
+     
       </Filtering>
     </div>
   ), [api, nameFilter, _setNameFilter, setToggle, t, toggles]);
@@ -424,5 +427,17 @@ export default React.memo(styled(Targets)`
 
   .ui--Table {
     overflow-x: auto;
+  }
+  .filtering{
+    display: flex!important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .CustomDisplay{
+    width:50% !important;
+  }
+  .staking--optionsBar{
+    width:50%;
   }
 `);

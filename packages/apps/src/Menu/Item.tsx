@@ -53,7 +53,7 @@ export default React.memo(styled(Item)`
 
   &.topLevel {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.214rem;
     border-radius: 0.15rem;
 
@@ -66,10 +66,12 @@ export default React.memo(styled(Item)`
     &.isActive.highlight--color-contrast {
       font-size: 1.15rem;
       font-weight: 400;
-      color: var(--color-text);
+      color: #fff;
 
       a {
-        background-color: var(--bg-tabs);
+        background-color: #45A5E7;
+        // color:#fff !important;
+        border-radius:8px;
       }
     }
 

@@ -55,7 +55,7 @@ export default React.memo(styled(Tab)`
   padding: 0 1.5rem;
   height: 100%;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 
 
     &:hover {
@@ -91,6 +91,7 @@ export default React.memo(styled(Tab)`
     height: 100%;
     display: flex;
     align-items: center;
+    font-weight:600;
   }
 
   .tabCounter {

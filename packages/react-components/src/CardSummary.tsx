@@ -72,7 +72,7 @@ function CardSummary ({ children, className = '', help, label, progress }: Props
               {isTimed && !children && (
                 <BlockToTime value={progress.total} />
               )}
-              <div className={isTimed ? 'isSecondary' : 'isPrimary'}>
+              <div className={isTimed ? 'isSecondary customBg' : 'isPrimary'}>
                 {!left || isUndefined(progress.total)
                   ? '-'
                   : !isTimed || progress.isPercent || !progress.value
@@ -99,64 +99,95 @@ function CardSummary ({ children, className = '', help, label, progress }: Props
 }
 
 export default React.memo(styled(CardSummary)`
-  align-items: center;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: var(--color-summary);
-  display: flex;
-  flex: 0 1 auto;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  padding: 0 1.5rem;
+align-items: center;
+background: transparent;
+border: none !important;
+box-shadow: none !important;
+color: var(--color-summary);
+display: flex;
+flex: 0 1 auto;
+flex-flow: row wrap;
+justify-content: flex-end;
+padding: 0 1.5rem;
 
-  .ui--FormatBalance .balance-postfix {
-    opacity: 1;
-  }
+&.CustomBg {
+  background: #fff !important;
+  border-radius:12px;
+}
 
-  .ui--Progress {
-    margin: 0.5rem 0.125rem 0.125rem 0.75rem;
-  }
+&.CustomEcho {
+  background: #E9F6FF;
+  border: 2px solid #9CCDED !important;
+  border-radius: 12px !important;
+}
 
-  > .ui--Labelled {
-    font-size: 1.75rem;
-    font-weight: var(--font-weight-light);
-    position: relative;
-    line-height: 1;
-    text-align: right;
+&.CustomBlockforks{
+  background: #fff !important;
+  border-radius:12px !important;
+  padding:10px  !important;
+  width: 82px;
+  height: 78px;
+  justify-content: space-evenly;
+}
 
-    > * {
-      margin: 0.25rem 0;
+&.CustomTechComm{
+  background: #fff !important;
+  border-radius:12px;
+  padding:15px 10px;
+}
 
-      &:first-child {
-        margin-top: 0;
-      }
+.hlyaRM.ui--Labelled.isSmall > label{
+  margin-bottom:8px;
+}
 
-      &:last-child {
-        margin-bottom: 0;
-      }
+.ui--FormatBalance .balance-postfix {
+  opacity: 1;
+}
+
+.ui--Progress {
+  margin: 0.5rem 0.125rem 0.125rem 0.75rem;
+}
+
+> .ui--Labelled {
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  text-align: left;
+  color:#353945;
+
+  > * {
+    margin: 0.25rem 0;
+
+    &:first-child {
+      margin-top: 0;
     }
 
-    > label {
-      font-size: 0.95rem;
-    }
-
-    .isSecondary {
-      font-size: 1rem;
-      font-weight: var(--font-weight-normal);
-
-      .timer {
-        min-width: 8rem;
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  @media(max-width: 767px) {
-    min-height: 4.8rem;
-    padding: 0.25 0.4em;
+  > label {
+    font-size: 0.95rem;
+  }
 
-    > div {
-      font-size: 1.4rem;
+  .isSecondary {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+
+    .timer {
+      min-width: 8rem;
     }
   }
+}
+
+@media(max-width: 767px) {
+  min-height: 4.8rem;
+  padding: 0.25 0.4em;
+
+  > div {
+    font-size: 1.4rem;
+  }
+}
 `);

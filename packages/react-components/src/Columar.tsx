@@ -38,6 +38,7 @@ function Columar ({ children, className = '', is60 }: Props): React.ReactElement
 const ColumarStyled = React.memo(styled(Columar)`
   display: flex;
   flex-wrap: wrap;
+  margin-top:12px;
 
   &.is50 {
     .ui--Column {

@@ -43,7 +43,7 @@ function Popup ({ children, className = '', isDisabled = false, onCloseAction, p
         {children ?? (
           <Button
             className={isOpen ? 'isOpen' : ''}
-            icon='ellipsis-v'
+            icon='ellipsis-h'
             isDisabled={isDisabled}
             isReadOnly={false}
           />

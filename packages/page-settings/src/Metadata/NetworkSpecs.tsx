@@ -41,7 +41,7 @@ const initialState = {
   genesisHash: '',
   prefix: 0,
   title: '',
-  unit: 'UNIT'
+  unit: 'AXC'
 };
 
 function NetworkSpecs ({ chainInfo, className }: Props): React.ReactElement<Props> {
@@ -122,7 +122,9 @@ function NetworkSpecs ({ chainInfo, className }: Props): React.ReactElement<Prop
             <ChainImg className='settings--networkSpecs-logo' />
           </div>
         </td>
-        <td rowSpan={6}>
+        <td
+          className='CustomBgFFF'
+          rowSpan={6}>
           {qrData.genesisHash && (
             <QrNetworkSpecs
               className='settings--networkSpecs-qr'
@@ -219,7 +221,9 @@ function NetworkSpecs ({ chainInfo, className }: Props): React.ReactElement<Prop
 }
 
 export default React.memo(styled(NetworkSpecs)`
-
+.isrnfR th h1, .isrnfR th h2{
+  padding:10px !important;
+}
   td {
       padding: 0;
 
@@ -227,6 +231,10 @@ export default React.memo(styled(NetworkSpecs)`
           border: none !important;
           background: transparent;
       }
+  }
+
+  .CustomBgFFF{
+    background:#fff !important;
   }
 
   .settings--networkSpecs-name {
@@ -283,4 +291,12 @@ export default React.memo(styled(NetworkSpecs)`
       }
   }
 
+  .isrnfR tr:not(.filter) th{
+    border-bottom: 1px solid #E6E8EC !important;
+  }
+  .ui.input.disabled:not(.retain-appearance) input {
+  border-style: none !important;
+  border: none !important;
+  
+  }
 `);

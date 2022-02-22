@@ -51,7 +51,7 @@ interface Props {
 const DEFAULT_BITLENGTH = BitLengthOption.NORMAL_NUMBERS as BitLength;
 
 export class TokenUnit {
-  public static abbr = 'Unit';
+  public static abbr = 'AXC';
 
   public static setAbbr (abbr: string = TokenUnit.abbr): void {
     TokenUnit.abbr = abbr;
@@ -75,7 +75,8 @@ function getRegex (isDecimal: boolean): RegExp {
 function getSiOptions (symbol: string, decimals?: number): { text: string; value: string }[] {
   return formatBalance.getOptions(decimals).map(({ power, text, value }): { text: string; value: string } => ({
     text: power === 0
-      ? symbol
+      ? "AXC"
+      // ? symbol
       : text,
     value
   }));
@@ -331,4 +332,5 @@ export default React.memo(styled(InputNumber)`
     bottom: 1.1rem;
     right: 6.5rem;
   }
+ 
 `);

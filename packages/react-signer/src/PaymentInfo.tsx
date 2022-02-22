@@ -64,9 +64,9 @@ function PaymentInfo ({ accountId, className = '', extrinsic }: Props): React.Re
           </Trans>
         }
       />
-      {isFeeError && (
+      {/* {isFeeError && (
         <MarkWarning content={t<string>('The account does not have enough free funds (excluding locked/bonded/reserved) available to cover the transaction fees without dropping the balance below the account existential amount.')} />
-      )}
+      )} */}
     </>
   );
 }

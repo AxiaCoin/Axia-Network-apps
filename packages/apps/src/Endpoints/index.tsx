@@ -249,8 +249,9 @@ function Endpoints ({ className = '', offset, onClose }: Props): React.ReactElem
     <Sidebar
       button={
         <Button
+          className='SwitchBtn'
           icon='sync'
-          isDisabled={canSwitch}
+          // isDisabled={canSwitch}
           label={t<string>('Switch')}
           onClick={_onApply}
         />
@@ -324,5 +325,15 @@ export default React.memo(styled(Endpoints)`
 
   .endpointCustomWrapper {
     position: relative;
+  }
+  .SwitchBtn{
+    background: #178FE1;
+    border-radius: 12px;
+    color:#fff;
+    margin-right:150px;
+
+    .ui--Icon{
+      color:#fff !important;
+    }
   }
 `);

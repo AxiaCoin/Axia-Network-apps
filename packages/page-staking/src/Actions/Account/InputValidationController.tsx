@@ -6,7 +6,7 @@ import type { Option } from '@axia-js/types';
 import type { AccountId, StakingLedger } from '@axia-js/types/interfaces';
 
 import React, { useEffect, useState } from 'react';
-
+import styled from 'styled-components';
 import { MarkError, MarkWarning } from '@axia-js/react-components';
 import { useApi, useCall } from '@axia-js/react-hooks';
 
@@ -82,4 +82,7 @@ function ValidateController ({ accountId, controllerId, defaultController, onErr
   );
 }
 
-export default React.memo(ValidateController);
+export default React.memo(styled(ValidateController)`
+
+
+`);

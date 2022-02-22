@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
+import styled from 'styled-components';
 
 import { CardSummary, SummaryBox } from '@axia-js/react-components';
 import { useApi } from '@axia-js/react-hooks';
@@ -15,7 +16,7 @@ interface Props {
   eventCount: number;
 }
 
-function Summary ({ eventCount }: Props): React.ReactElement {
+function Summary ({ eventCount }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
 
@@ -24,11 +25,14 @@ function Summary ({ eventCount }: Props): React.ReactElement {
       <section>
         {api.query.timestamp && (
           <>
-            <CardSummary label={t<string>('last block')}>
+            <CardSummary
+              className='CustomBg'
+              label={t<string>('last block')}
+            >
               <TimeNow />
             </CardSummary>
             <CardSummary
-              className='media--800'
+              className='media--800 CustomBg'
               label={t<string>('target')}
             >
               <BlockToTime value={BN_ONE} />
@@ -37,7 +41,7 @@ function Summary ({ eventCount }: Props): React.ReactElement {
         )}
         {api.query.balances && (
           <CardSummary
-            className='media--800'
+            className='media--800 CustomBg'
             label={t<string>('total issuance')}
           >
             <TotalIssuance />
@@ -45,21 +49,27 @@ function Summary ({ eventCount }: Props): React.ReactElement {
         )}
       </section>
       <section className='media--1200'>
-        <SummarySession withEra={false} />
+        <SummarySession className='CustomEcho' withEra={false} />
       </section>
       <section>
         <CardSummary
-          className='media--1000'
+          className='media--1000 CustomBg'
           label={t<string>('last events')}
         >
           {formatNumber(eventCount)}
         </CardSummary>
         {api.query.grandpa && (
-          <CardSummary label={t<string>('finalized')}>
+          <CardSummary
+            className='CustomBg'
+            label={t<string>('finalized')}
+          >
             <BestFinalized />
           </CardSummary>
         )}
-        <CardSummary label={t<string>('best')}>
+        <CardSummary
+          className='CustomBg'
+          label={t<string>('best')}
+        >
           <BestNumber />
         </CardSummary>
       </section>
@@ -67,4 +77,6 @@ function Summary ({ eventCount }: Props): React.ReactElement {
   );
 }
 
-export default React.memo(Summary);
+export default React.memo(styled(Summary)`
+
+`);

@@ -113,11 +113,24 @@ export default React.memo(styled(InputAddressMulti)`
   margin-left: 2rem;
   width: calc(100% - 2rem);
 
+  .ui.selection.dropdown, .ui.input > input, .ui.selection.dropdown > input{
+    background: #FFFFFF;
+    border: 2px solid #B1B5C4;
+    box-sizing: border-box;
+    border-radius: 12px;
+    width:98%;
+    margin:auto;
+  }
+  label {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
   .ui--InputAddressMulti-Input {
     .ui.input {
       margin-bottom: 0.25rem;
       opacity: 1 !important;
     }
+    
   }
 
   .ui--InputAddressMulti-columns {
@@ -136,12 +149,16 @@ export default React.memo(styled(InputAddressMulti)`
 
       .ui--InputAddressMulti-items {
         padding: 0.5rem 0;
-        background: var(--bg-input);
-        border: 1px solid var(--border-input);
-        border-radius: 0.286rem 0.286rem;
+        // background: var(--bg-input);
+        // border: 1px solid var(--border-input);
+        // border-radius: 0.286rem 0.286rem;
         flex: 1;
         overflow-y: auto;
         overflow-x: hidden;
+        background:#fff;
+        border: 2px solid #B1B5C4;
+        box-sizing: border-box;
+        border-radius: 12px;
 
         .ui--Spinner {
           margin-top: 2rem;

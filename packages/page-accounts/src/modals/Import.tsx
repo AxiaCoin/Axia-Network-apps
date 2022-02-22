@@ -149,6 +149,7 @@ function Import ({ className = '', onClose, onStatusChange }: Props): React.Reac
       </Modal.Content>
       <Modal.Actions>
         <Button
+          className=''
           icon='sync'
           isBusy={isBusy}
           isDisabled={!pair || !isPassValid}

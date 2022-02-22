@@ -2,6 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { useCallback, useState } from 'react';
+
+import styled from 'styled-components';
+
 import { Input as SUIInput } from 'semantic-ui-react';
 
 import { isFunction, isUndefined } from '@axia-js/util';
@@ -210,8 +213,13 @@ function Input ({ autoFocus = false, children, className, defaultValue, help, ic
   );
 }
 
-export default React.memo(Input);
+export default React.memo(styled(Input)`
+.ui.input>input {
+  border:2px solid #B1B5C4;
+  border-radius: 12px;
+}
 
+`);
 export {
   isCopy,
   isCut,

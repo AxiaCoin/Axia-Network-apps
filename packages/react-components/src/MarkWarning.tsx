@@ -15,14 +15,14 @@ interface Props {
 function MarkWarning ({ children, className = '', content }: Props): React.ReactElement<Props> {
   return (
     <article className={`mark warning ${className}`}>
-      <Icon icon='exclamation-triangle' />{content}{children}
+      <Icon icon='' />{content}{children}
     </article>
   );
 }
 
 export default React.memo(styled(MarkWarning)`
-  .ui--Icon {
-    color: rgba(255, 196, 12, 1);
-    margin-right: 0.5rem;
-  }
+  // .ui--Icon {
+  //   color: rgba(255, 196, 12, 1);
+  //   margin-right: 0.5rem;
+  // }
 `);

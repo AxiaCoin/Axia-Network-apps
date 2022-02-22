@@ -5,6 +5,7 @@ import type { Option } from '@axia-js/apps-config/settings/types';
 import type { SettingsStruct } from '@axia-js/ui-settings/types';
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import styled from 'styled-components';
 
 import { createLanguages, createSs58 } from '@axia-js/apps-config';
 import { allNetworks } from '@axia-js/networks';
@@ -34,12 +35,12 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
     return { ...values, uiTheme: values.uiTheme === 'dark' ? 'dark' : 'light' };
   });
 
-  const iconOptions = useMemo(
-    () => settings.availableIcons
+  const iconOptions = useMemo(() => {
+      const tempIconOptions = settings.availableIcons
       .map((o): Option => createIdenticon(o, ['default']))
-      .concat(createIdenticon({ info: 'robohash', text: 'RoboHash', value: 'robohash' })),
-    []
-  );
+      .concat(createIdenticon({ info: 'robohash', text: 'RoboHash', value: 'robohash' }))
+      return tempIconOptions.filter(({ value })=> ["axia", "default"].includes(value));
+    },[]);
 
   const prefixOptions = useMemo(
     (): (Option | React.ReactNode)[] => {
@@ -114,7 +115,7 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
 
   return (
     <div className={className}>
-      <div className='ui--row'>
+      {/* <div className='ui--row'>
         <Dropdown
           defaultValue={prefix}
           help={t<string>('Override the default ss58 prefix for address generation')}
@@ -122,7 +123,7 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
           onChange={_handleChange('prefix')}
           options={prefixOptions}
         />
-      </div>
+      </div> */}
       <div className='ui--row'>
         <Dropdown
           defaultValue={icon}
@@ -132,22 +133,22 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
           options={iconOptions}
         />
       </div>
-      <div className='ui--row'>
+      {/* <div className='ui--row'>
         <Dropdown
           defaultValue={uiTheme}
           label={t<string>('default interface theme')}
           onChange={_handleChange('uiTheme')}
           options={themeOptions}
         />
-      </div>
-      <div className='ui--row'>
+      </div> */}
+      {/* <div className='ui--row'>
         <Dropdown
           defaultValue={i18nLang}
           label={t<string>('default interface language')}
           onChange={_handleChange('i18nLang')}
           options={translateLanguages}
         />
-      </div>
+      </div> */}
       {isLedgerCapable && (
         <>
           <div className='ui--row'>
@@ -158,7 +159,7 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
               onChange={_handleChange('ledgerConn')}
               options={ledgerConnOptions}
             />
-          </div>
+          </div>  
           {state.ledgerConn !== 'none' && (
             <div className='ui--row'>
               <MarkWarning content={t<string>('Ledger support is still experimental and some issues may remain. Trust, but verify the addresses on your devices before transferring large amounts. There are some features that will not work, including batch calls (used extensively in staking and democracy) as well as any identity operations.')} />
@@ -186,4 +187,38 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
   );
 }
 
-export default React.memo(General);
+export default React.memo(styled(General)`
+  .ui.selection.dropdown{
+    background: #FFFFFF !important;
+    // border: 2px solid #B1B5C4;
+    box-sizing: border-box;
+    border-radius: 12px !important;
+  }
+  .ui--Dropdown-item {
+
+    position: relative;
+      white-space: nowrap;
+    background: none !important;
+    border: none !important;
+    border-radius: 12px;
+    
+    }
+  .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+    background:#178FE1 !important;
+    color:#fff !important;
+  }
+  .ui-Icon:hover{
+    background:red !important;
+  }
+  .WnYpr.hasLabel{
+    color:##178FE1 !important;
+    font-weight:500;
+  }
+  button.ui--Button{
+    color: #fff;
+  }
+  button.ui--Button:hover{
+    color: #fff !important;
+    background:#178FE1 !important;
+  }
+`);

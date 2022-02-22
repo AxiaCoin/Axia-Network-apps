@@ -20,6 +20,5 @@
   "rpc.prod.chainx": "ChainX",
   "rpc.prod.axccanarynet" : "CanaryNet",
 
-  "rpc.test.pontem": "Pontem",
   "rpc.test.axctestnet": "ZeeveTestNet",
 }

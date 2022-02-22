@@ -120,7 +120,7 @@ function createWebpack (context, mode = 'production') {
           ...mapChunks('axia', [
             /* 00 */ /node_modules\/@axia\/(wasm)/,
             /* 01 */ /node_modules\/(@axia\/(api|metadata|rpc|types))/,
-            /* 02 */ /node_modules\/(@axia\/(extension|keyring|networks|react|ui|util|vanitygen|x-)|@acala-network|@edgeware|@laminar|@ledgerhq|@open-web3|@sora-axlib|@subsocial|@zondax|edgeware)/
+            /* 02 */ /node_modules\/(@axia\/(extension|keyring|networks|react|ui|util|vanitygen|x-)|@acala-network|@edgeware|@laminar|@ledgerhq|@open-web3|@sora-axlib|@zondax|edgeware)/
           ]),
           ...mapChunks('react', [
             /* 00 */ /node_modules\/(@fortawesome)/,

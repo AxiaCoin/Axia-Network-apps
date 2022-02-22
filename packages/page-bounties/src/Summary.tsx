@@ -29,17 +29,17 @@ function Summary ({ activeBounties, className = '' }: Props): React.ReactElement
   return (
     <SummaryBox className={`ui--BountySummary ${className}`}>
       <section>
-        <CardSummary label={t<string>('active')}>
+        <CardSummary className='CustomBg' label={t<string>('active')}>
           {activeBounties}
         </CardSummary>
         {activeBounties !== undefined && (
-          <CardSummary label={t<string>('past')}>
+          <CardSummary className='CustomBg' label={t<string>('past')}>
             {bountyIndex?.subn(activeBounties).toString()}
           </CardSummary>
         )}
       </section>
       <section>
-        <CardSummary label={t<string>('active total')}>
+        <CardSummary className='CustomBg' label={t<string>('active total')}>
           <FormatBalance
             value={totalValue}
             withSi
@@ -49,6 +49,7 @@ function Summary ({ activeBounties, className = '' }: Props): React.ReactElement
       <section>
         {bestNumber && spendPeriod.gtn(0) && (
           <CardSummary
+            className='CustomEcho'
             label={t<string>('funding period')}
             progress={{
               total: spendPeriod,

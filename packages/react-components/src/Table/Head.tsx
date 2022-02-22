@@ -40,7 +40,7 @@ function Head ({ className = '', filter, header, isEmpty }: Props): React.ReactE
                 <h1>
                   <Icon
                     className='highlight--color'
-                    icon='axc-circle'
+                    // icon='axc-circle'
                   />
                   {label}
                 </h1>
@@ -70,11 +70,17 @@ export default React.memo(styled(Head)`
 
     h1, h2 {
       font-size: 1.75rem;
+      text-transform:capitalize;
+      font-weight:600;
+      color:#23262F;
     }
 
     h1 {
       display: table-cell;
       vertical-align: middle;
+      padding-top:10px;
+      padding-bottom:10px;
+     
 
       .ui--Icon {
         font-size: 1rem;
@@ -134,6 +140,7 @@ export default React.memo(styled(Head)`
   tr {
     background: var(--bg-table);
     text-transform: lowercase;
+  
 
     &:first-child {
       th {
@@ -158,7 +165,7 @@ export default React.memo(styled(Head)`
 
     &:not(.filter) {
       th {
-        color: var(--color-table-head);
+        color: #23262F;
       }
     }
   }

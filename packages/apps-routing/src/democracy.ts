@@ -15,7 +15,7 @@ export default function create (t: TFunction): Route {
       ]
     },
     group: 'governance',
-    icon: 'calendar-check',
+    icon: 'check-circle',
     name: 'democracy',
     text: t('nav.democracy', 'Democracy', { ns: 'apps-routing' }),
     useCounter

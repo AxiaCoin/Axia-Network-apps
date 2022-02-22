@@ -38,11 +38,12 @@ function SettingsApp ({ basePath, onStatusChange }: Props): React.ReactElement<P
     {
       name: 'developer',
       text: t<string>('Developer')
-    },
-    {
-      name: 'i18n',
-      text: t<string>('Translate')
     }
+    //,
+    // {
+    //   name: 'i18n',
+    //   text: t<string>('Translate')
+    // }
   ], [numExtensions, t]);
 
   const hidden = useMemo(

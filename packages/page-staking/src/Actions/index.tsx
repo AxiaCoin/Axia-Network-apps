@@ -18,6 +18,7 @@ import Account from './Account';
 import NewNominator from './NewNominator';
 import NewStash from './NewStash';
 import NewValidator from './NewValidator';
+import styled from 'styled-components';
 
 interface Props {
   className?: string;
@@ -150,12 +151,13 @@ function Actions ({ className = '', isInElection, ownStashes, targets }: Props):
 
   return (
     <div className={className}>
-      <Button.Group>
+      <Button.Group className="position-toggle-buttons">
         <ToggleGroup
           onChange={setTypeIndex}
           options={typeRef.current}
           value={typeIndex}
         />
+        <div>
         <NewNominator
           isInElection={isInElection}
           targets={targets}
@@ -165,6 +167,8 @@ function Actions ({ className = '', isInElection, ownStashes, targets }: Props):
           targets={targets}
         />
         <NewStash />
+        </div>
+  
       </Button.Group>
       <ElectionBanner isInElection={isInElection} />
       <Table
@@ -186,4 +190,12 @@ function Actions ({ className = '', isInElection, ownStashes, targets }: Props):
   );
 }
 
-export default React.memo(Actions);
+export default React.memo(styled(Actions)`
+.position-toggle-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+`);

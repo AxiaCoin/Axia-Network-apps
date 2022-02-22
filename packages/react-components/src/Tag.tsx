@@ -64,7 +64,7 @@ export default React.memo(styled(Tag)`
   }
 
   &.greenColor {
-    background: #21ba45;
+    background: #35B994;
   }
 
   &.greyColor {
@@ -80,7 +80,7 @@ export default React.memo(styled(Tag)`
   }
 
   &.redColor {
-    background: #db2828;
+    background: #F12F2F;
   }
 
   &.yellowColor {

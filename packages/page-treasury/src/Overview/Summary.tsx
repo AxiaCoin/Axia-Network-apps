@@ -28,21 +28,21 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
   return (
     <SummaryBox>
       <section>
-        <CardSummary label={t<string>('proposals')}>
+        <CardSummary className='CustomBg' label={t<string>('proposals')}>
           {formatNumber(proposalCount)}
         </CardSummary>
-        <CardSummary label={t<string>('total')}>
+        <CardSummary className='CustomBg' label={t<string>('total')}>
           {formatNumber(totalProposals || 0)}
         </CardSummary>
       </section>
-      <section className='media--1200'>
-        <CardSummary label={t<string>('approved')}>
+      <section className='media--1200 CustomBg'>
+        <CardSummary className='CustomBg' label={t<string>('approved')}>
           {formatNumber(approvalCount)}
         </CardSummary>
       </section>
       <section>
         {value && (
-          <CardSummary label={t<string>('available')}>
+          <CardSummary className='CustomBg' label={t<string>('available')}>
             <FormatBalance
               value={value}
               withSi
@@ -51,7 +51,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
         )}
         {burn && (
           <CardSummary
-            className='media--1000'
+            className='media--1000 CustomBg'
             label={t<string>('next burn')}
           >
             <FormatBalance
@@ -64,6 +64,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
       {bestNumber && spendPeriod?.gtn(0) && (
         <section>
           <CardSummary
+            className='CustomEcho'
             label={t<string>('spend period')}
             progress={{
               total: spendPeriod,

@@ -48,7 +48,7 @@ function getFormat (registry: Registry, formatIndex = 0): [number, string] {
 }
 
 function createElement (prefix: string, postfix: string, unit: string, label: LabelPost = '', isShort = false): React.ReactNode {
-  return <>{`${prefix}${isShort ? '' : '.'}`}{!isShort && <span className='ui--FormatBalance-postfix'>{`0000${postfix || ''}`.slice(-4)}</span>}<span className='ui--FormatBalance-unit'> {unit}</span>{label}</>;
+  return <>{`${prefix}${isShort ? '' : '.'}`}{!isShort && <span className='ui--FormatBalance-postfix'>{`0000${postfix || ''}`.slice(-4)}</span>}<span className='ui--FormatBalance-unit'> AXC</span>{label}</>;
 }
 
 function splitFormat (value: string, label?: LabelPost, isShort?: boolean): React.ReactNode {
@@ -68,7 +68,8 @@ function applyFormat (value: Compact<any> | BN | string, [decimals, token]: [num
     const minor = rest.substr(0, 4);
     const unit = rest.substr(4);
 
-    return <>{major}.<span className='ui--FormatBalance-postfix'>{minor}</span><span className='ui--FormatBalance-unit'>{unit}{unit ? unitPost : ` ${unitPost}`}</span>{labelPost || ''}</>;
+    // return <>{major}.<span className='ui--FormatBalance-postfix'>{minor}</span><span className='ui--FormatBalance-unit'>{unit}{unit ? unitPost : ` ${unitPost}`}</span>{labelPost || ''}</>;
+    return <>{major}.<span className='ui--FormatBalance-postfix'>{minor}</span><span className='ui--FormatBalance-unit'>{unit}{unit && "AXC" }</span>{labelPost || ''}</>;
   }
 
   return createElement(prefix, postfix, unitPost, labelPost, isShort);
@@ -109,6 +110,7 @@ export default React.memo(styled(FormatBalance)`
   display: inline-block;
   vertical-align: baseline;
   white-space: nowrap;
+  padding-top: 0.4rem;
 
   * {
     vertical-align: baseline !important;

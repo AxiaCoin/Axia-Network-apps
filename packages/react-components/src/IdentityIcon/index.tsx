@@ -8,9 +8,10 @@ import React, { useCallback, useContext } from 'react';
 import styled from 'styled-components';
 
 import { getSystemIcon } from '@axia-js/apps-config';
+import { Icon } from '@axia-js/react-components';
 import { ThemeProps } from '@axia-js/react-components/types';
 import { useApi } from '@axia-js/react-hooks';
-import BaseIdentityIcon from '@axia-js/react-identicon';
+// import BaseIdentityIcon from '@axia-js/react-identicon';
 import { settings } from '@axia-js/ui-settings';
 
 import StatusContext from '../Status/Context';
@@ -52,16 +53,47 @@ function IdentityIcon ({ className = '', prefix, size = 24, theme, value }: Prop
     [queueAction, t]
   );
 
+  const colorGen = (): string => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+  };
+
+  const copy = (val: string): void => {
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    _onCopy();
+  };
+
   return (
-    <BaseIdentityIcon
-      Custom={Custom}
-      className={className}
-      onCopy={_onCopy}
-      prefix={prefix}
-      size={size}
-      theme={isEthereum ? 'ethereum' : thisTheme as 'axlib'}
-      value={isCodec(value) ? value.toString() : value}
-    />
+    <span
+      // Custom={Custom}
+      className= {`${className} ui--IdentityIcon`}
+      // onCopy={_onCopy}
+      // prefix={prefix}
+      // size={size}
+      onClick={() => { copy(isCodec(value) ? value.toString() : value) }}
+      style={{ background: colorGen(), color: '#fff', padding: '0.5rem', borderRadius: '1rem', fontSize: '0.9rem', cursor: "copy" }}
+      // theme={isEthereum ? 'ethereum' : thisTheme as 'axlib'}
+      // value={isCodec(value) ? value.toString() : value}
+    ><Icon
+        icon='address-card'
+      />
+    </span>
   );
 }
 

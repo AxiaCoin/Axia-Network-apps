@@ -54,10 +54,10 @@ function Summary ({ events, maxBlockWeight, signedBlock }: Props): React.ReactEl
       <section>
         {api.query.balances && (
           <>
-            <CardSummary label={t<string>('deposits')}>
+            <CardSummary className='CustomBg' label={t<string>('deposits')}>
               <FormatBalance value={deposits} />
             </CardSummary>
-            <CardSummary label={t<string>('transfers')}>
+            <CardSummary className='CustomBg' label={t<string>('transfers')}>
               <FormatBalance value={transfers} />
             </CardSummary>
           </>
@@ -66,6 +66,7 @@ function Summary ({ events, maxBlockWeight, signedBlock }: Props): React.ReactEl
       {maxBlockWeight && (
         <section>
           <CardSummary
+          className='CustomEcho'
             label={t<string>('block weight')}
             progress={{
               hideValue: true,
@@ -78,10 +79,10 @@ function Summary ({ events, maxBlockWeight, signedBlock }: Props): React.ReactEl
         </section>
       )}
       <section>
-        <CardSummary label={t<string>('event count')}>
+        <CardSummary className='CustomBg' label={t<string>('event count')}>
           {formatNumber(events.length)}
         </CardSummary>
-        <CardSummary label={t<string>('extrinsic count')}>
+        <CardSummary className='CustomBg' label={t<string>('extrinsic count')}>
           {formatNumber(signedBlock.block.extrinsics.length)}
         </CardSummary>
       </section>

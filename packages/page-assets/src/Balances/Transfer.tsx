@@ -30,7 +30,7 @@ function Transfer ({ accountId, assetId, className, minBalance, siFormat: [siDec
   return (
     <>
       <Button
-        icon='paper-plane'
+        icon='location-arrow'
         label={t<string>('send')}
         onClick={toggleOpen}
       />
@@ -90,7 +90,7 @@ function Transfer ({ accountId, assetId, className, minBalance, siFormat: [siDec
           <Modal.Actions>
             <TxButton
               accountId={accountId}
-              icon='paper-plane'
+              icon='location-arrow'
               isDisabled={!recipientId || !amount}
               label={t<string>('Send')}
               onStart={toggleOpen}

@@ -19,7 +19,7 @@ function TabsSectionDelimiter ({ className = '' }: TabsSectionDelimiterProps): R
         xmlns='http://www.w3.org/2000/svg'
       >
         <path
-          className='highlight--stroke'
+          className='highlight--stroke path-vert'
           d='M1 1L16 32.5L1 64'
           stroke='#D1D1D1'
         />

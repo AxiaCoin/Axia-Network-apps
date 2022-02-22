@@ -33,7 +33,7 @@ function iconName (status: string): IconName {
       return 'telegram-plane';
 
     default:
-      return 'check';
+      return 'check-circle';
   }
 }
 
@@ -46,7 +46,7 @@ function signerIconName (status: QueueTxStatus): IconName {
     case 'inblock':
     case 'finalized':
     case 'sent':
-      return 'check';
+      return 'check-circle';
 
     case 'dropped':
     case 'invalid':
@@ -59,7 +59,7 @@ function signerIconName (status: QueueTxStatus): IconName {
 
     case 'queued':
     // case 'retracted':
-      return 'random';
+      return 'location-arrow';
 
     default:
       return 'spinner';
@@ -223,23 +223,29 @@ export default React.memo(styled(Status)`
 
     > .wrapper > .container {
       align-items: center;
-      background: #00688b;
-      border-radius: 0.25rem;
-      color: white;
+      // background: red;
+      // border-radius: 0.25rem;
+      // color: white;
       display: flex;
       justify-content: space-between;
       margin-bottom: 0.25rem;
       padding: 0 0.5rem;
       vertical-align: middle;
       position: relative;
+      background: #35B994;
+      box-shadow: 0px 4px 20px rgba(41, 55, 65, 0.1);
+      border-radius: 8px;
+      color:#fff;
 
       .desc {
         flex: 1;
         overflow: hidden;
         padding: 0.5rem 1rem;
+        
 
         .status {
           font-weight: var(--font-weight-normal);
+          font-size:14px;
         }
 
         .ui--AddressMini {
@@ -256,7 +262,7 @@ export default React.memo(styled(Status)`
 
       .short {
         font-size: 2.5rem;
-        opacity:  0.75;
+        // opacity:  0.75;
         padding: 0.5rem 0 0.5rem 0.5rem;
 
         .ui--Icon {
@@ -291,7 +297,10 @@ export default React.memo(styled(Status)`
     &.sent,
     &.success {
       & > .wrapper > .container {
-        background: green;
+        // background: green;
+        background: #35B994;
+        box-shadow: 0px 4px 20px rgba(41, 55, 65, 0.1);
+        border-radius: 8px;
       }
     }
 

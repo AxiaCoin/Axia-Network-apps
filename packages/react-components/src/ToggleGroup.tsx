@@ -31,7 +31,7 @@ function ToggleIndex ({ index, isDisabled, isSelected, onChange, text }: ToggleP
 
   return (
     <Button
-      icon={isSelected ? 'check' : 'circle'}
+      // icon={isSelected ? 'check' : 'circle'}
       isBasic
       isDisabled={isDisabled}
       isSelected={isSelected}
@@ -66,22 +66,37 @@ function ToggleGroup ({ className = '', onChange, options, value }: Props): Reac
 }
 
 export default React.memo(styled(ToggleGroup)`
-  display: inline-block;
-  margin-right: 1.5rem;
-
+display: inline-block;
+margin-right: 1.5rem;
+border: 2px solid #9CCDED;
+box-sizing: border-box;
+border-radius: 16px;
+padding: 5px;
+height: 60px;
+.isBasic{
+  background: none; 
+}
+.ui--Button.isBasic:not(.isDisabled):not(.isIcon):not(.isSelected):not(.isReadOnly) {
+  box-shadow: none;
+}
   .ui--Button {
-    margin: 0;
+    height: 48px;
+    margin: 0px 0px;
+    border-radius: 12px;
+    box-shadow: none;
 
-    &:not(:first-child) {
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
+    // &:not(:first-child) {
+    //   border-bottom-left-radius: 0;
+    //   border-top-left-radius: 0;
+    // }
+
+    // &:not(:last-child) {
+    //   border-bottom-right-radius: 0;
+    //   border-top-right-radius: 0;
+    // }
+    .isBasic{
+      background: none;
     }
-
-    &:not(:last-child) {
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
-    }
-
     .ui--Icon {
       width: 1em;
     }

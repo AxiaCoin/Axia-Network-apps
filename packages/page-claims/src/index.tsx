@@ -38,13 +38,14 @@ const PRECLAIMS_LOADING = 'PRECLAIMS_LOADING';
 const Payload = styled.pre`
   cursor: copy;
   font: var(--font-mono);
-  border: 1px dashed #c2c2c2;
+  border: 2px dashed #c2c2c2;
   background: #f2f2f2;
   padding: 1rem;
   width: 100%;
   margin: 1rem 0;
   white-space: normal;
   word-break: break-all;
+  border-radius:12px;
 `;
 
 const Signature = styled.textarea`
@@ -215,12 +216,12 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
             {(step === Step.Account) && (
               <Button.Group>
                 <Button
-                  icon='sign-in-alt'
                   isDisabled={preclaimEthereumAddress === PRECLAIMS_LOADING}
                   label={preclaimEthereumAddress === PRECLAIMS_LOADING
                     ? t<string>('Loading')
                     : t<string>('Continue')
                   }
+                  icon='long-arrow-alt-right'
                   onClick={handleAccountStep}
                 />
               </Button.Group>
@@ -243,9 +244,9 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
                 {(step === Step.ETHAddress) && (
                   <Button.Group>
                     <Button
-                      icon='sign-in-alt'
                       isDisabled={!ethereumAddress}
                       label={t<string>('Continue')}
+                      icon='long-arrow-alt-right'
                       onClick={goToStepSign}
                     />
                   </Button.Group>

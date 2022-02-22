@@ -29,7 +29,7 @@ function ChainInfo ({ className }: Props): React.ReactElement<Props> {
         className={`apps--SideBar-logo-inner${canToggle ? ' isClickable' : ''} highlight--color-contrast`}
         onClick={toggleEndpoints}
       >
-        <ChainImg />
+        {/* <ChainImg /> */}
         <div className='info media--1000'>
           <Chain className='chain' />
           {runtimeVersion && (
@@ -42,8 +42,8 @@ function ChainInfo ({ className }: Props): React.ReactElement<Props> {
         </div>
         {canToggle && (
           <Icon
-            className='dropdown'
-            icon={isEndpointsVisible ? 'caret-right' : 'caret-down'}
+            className='dropdown IconSize'
+            icon={isEndpointsVisible ? 'chevron-right' : 'chevron-down'}
           />
         )}
       </div>
@@ -109,5 +109,8 @@ export default React.memo(styled(ChainInfo)`
           letter-spacing: -0.01em;
       }
     }
+  }
+  .IconSize{
+    font-size:11px;
   }
 `);

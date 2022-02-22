@@ -388,7 +388,7 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
         {step === 1 &&
           <Button
             activeOnEnter
-            icon='step-forward'
+            icon='arrow-right'
             isDisabled={!isFirstStepValid}
             label={t<string>('Next')}
             onClick={nextStep}
@@ -397,13 +397,13 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
         {step === 2 && (
           <>
             <Button
-              icon='step-backward'
+              icon='arrow-left'
               label={t<string>('Prev')}
               onClick={prevStep}
             />
             <Button
               activeOnEnter
-              icon='step-forward'
+              icon='arrow-right'
               isDisabled={!isSecondStepValid}
               label={t<string>('Next')}
               onClick={nextStep}
@@ -413,7 +413,7 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
         {step === 3 && (
           <>
             <Button
-              icon='step-backward'
+              icon='arrow-left'
               label={t<string>('Prev')}
               onClick={prevStep}
             />
@@ -446,6 +446,7 @@ export default React.memo(styled(Create)`
   && .TextAreaWithDropdown {
     textarea {
       width: 80%;
+      
     }
     .ui.buttons {
       width: 20%;
@@ -459,7 +460,7 @@ export default React.memo(styled(Create)`
       margin: 0.8rem 0;
 
       > label {
-        font-weight: var(--font-weight-normal);
+        font-weight: 600;
       }
     }
   }

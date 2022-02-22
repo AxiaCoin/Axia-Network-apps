@@ -8,6 +8,7 @@ import type { Registry, TypeDef } from '@axia-js/types/types';
 import type { ComponentProps as Props } from '../types';
 
 import React, { useCallback, useState } from 'react';
+import styled from 'styled-components';
 
 import { ApiPromise } from '@axia-js/api';
 import { Button, InputStorage } from '@axia-js/react-components';
@@ -143,6 +144,7 @@ function Modules ({ onAdd }: Props): React.ReactElement<Props> {
     <section className='storage--actionrow'>
       <div className='storage--actionrow-value'>
         <InputStorage
+          className='storage--actionrow-value'
           defaultValue={api.query.timestamp?.now || api.query.system.events}
           help={meta?.docs.join(' ')}
           label={t<string>('selected state query')}
@@ -158,7 +160,7 @@ function Modules ({ onAdd }: Props): React.ReactElement<Props> {
       </div>
       <div className='storage--actionrow-buttons'>
         <Button
-          icon='plus'
+          icon='plus-square'
           isDisabled={!isValid}
           onClick={_onAdd}
         />
@@ -167,4 +169,6 @@ function Modules ({ onAdd }: Props): React.ReactElement<Props> {
   );
 }
 
-export default React.memo(Modules);
+export default React.memo(styled(Modules)`
+   
+`);

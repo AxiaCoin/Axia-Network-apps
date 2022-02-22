@@ -40,13 +40,14 @@ export default React.memo(styled(Balances)`
 
     .column {
       width: auto;
-      max-width: 18.57rem;
+      max-width: 100%;
 
       label {
         text-align: left;
         color: inherit;
-        font-size: 0.93rem;
-        font-weight: var(--font-weight-normal);
+        font-size: 13px !important;
+        font-weight: 400 !important;
+        text-transform: capitalize !important;
       }
 
       .ui--Expander-content .ui--FormatBalance-value {
@@ -54,4 +55,11 @@ export default React.memo(styled(Balances)`
       }
     }
   }
+  .ui--AddressMenu-sectionHeader{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #23262F;
+  }
+  
 `);

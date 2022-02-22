@@ -179,7 +179,7 @@ function PollApp ({ basePath, className }: Props): React.ReactElement<Props> {
               <Button.Group>
                 <TxButton
                   accountId={accountId}
-                  icon='paper-plane'
+                  icon='location-arrow'
                   isDisabled={!hasValue}
                   label={t('Vote')}
                   params={[[opt10m, opt100m, opt1b, opt10b]]}

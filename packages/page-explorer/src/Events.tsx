@@ -63,5 +63,9 @@ export default React.memo(styled(Events)`
       right: 0.75rem;
       top: 0.5rem;
     }
+    
+  }
+  .ui--Expander{
+    // padding:10rem;
   }
 `);

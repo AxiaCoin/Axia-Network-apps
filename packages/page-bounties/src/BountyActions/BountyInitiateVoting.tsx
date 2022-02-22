@@ -48,7 +48,7 @@ function BountyInitiateVoting ({ description, index, proposals }: Props): React.
     ? (
       <>
         <Button
-          icon='step-forward'
+          icon='arrow-right'
           isDisabled={false}
           label={t<string>('Initiate voting')}
           onClick={toggleOpen}

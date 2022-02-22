@@ -61,7 +61,7 @@ function TipsEntry ({ className, hashes, isMember, members }: Props): React.Reac
         <TxButton
           accountId={defaultId}
           extrinsic={batchTxs}
-          icon='fighter-jet'
+          icon='location-arrow'
           isDisabled={!isMember || !batchTxs}
           label={t<string>('Median tip selected')}
         />

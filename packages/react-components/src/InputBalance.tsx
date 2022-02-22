@@ -105,11 +105,11 @@ export default React.memo(styled(InputBalance)`
 
   .ui.action.input.ui--Input > .buttons {
     align-items: stretch;
-
+    // border
     .ui--SiDropdown.ui.button.compact.floating.selection.dropdown {
       &.disabled {
         border-style: solid;
-        opacity: 1 !important;
+        opacity: 1 !important;        
       }
 
       > div.text:first-child {
@@ -120,6 +120,15 @@ export default React.memo(styled(InputBalance)`
         left: 0.5rem;
         width: 3rem;
       }
+    }
+  }
+
+    .ui.action.input:not([class*="left action"])>input{
+      border-bottom-right-radius: 12px !important;
+      border-right-color: #B1B5C4 !important;
+      border-color: #B1B5C4 !important;
+      margin-right: 5px !important;
+      border-top-right-radius:12px !important;
     }
   }
 `);

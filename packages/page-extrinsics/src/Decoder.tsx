@@ -5,6 +5,8 @@ import type { SubmittableExtrinsic, SubmittableExtrinsicFunction } from '@axia-j
 import type { Call } from '@axia-js/types/interfaces';
 
 import React, { useCallback, useState } from 'react';
+import styled from 'styled-components';
+
 
 import { Button, Call as CallDisplay, Input, InputAddress, InputExtrinsic, MarkError, Output, TxButton } from '@axia-js/react-components';
 import { useApi } from '@axia-js/react-hooks';
@@ -131,4 +133,9 @@ function Decoder ({ className }: Props): React.ReactElement<Props> {
   );
 }
 
-export default React.memo(Decoder);
+export default React.memo(styled(Decoder)`
+.ui.input>input {
+  border: 2px solid #F12F2F;
+  border-radius: 12px;
+}
+`);

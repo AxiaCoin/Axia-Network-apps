@@ -60,6 +60,9 @@ function CreateConfirmation ({ address, derivePath, name, pairType, seed }: Prop
           value={derivePath || t<string>('<none provided>')}
         />
       </Modal.Columns>
+
+      {/* <article className='warning centered'>{t<string>('Consider storing your account in a signer such as a browser extension, hardware device, QR-capable phone wallet (non-connected) or desktop application for optimal account security. Future versions of the web-only interface will drop support for non-external accounts, much like the IPFS version.')}</article> */}
+
     </Modal.Content>
   );
 }

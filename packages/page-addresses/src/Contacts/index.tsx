@@ -62,18 +62,20 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
             filterOn={filterOn}
             label={t<string>('filter by name or tags')}
             setFilter={setFilter}
+            className='customInput'
           />
         </section>
         <Button.Group>
           <Button
-            icon='plus'
+            icon='plus-square'
             label={t<string>('Add contact')}
             onClick={toggleCreate}
+            className='customAdd'
           />
         </Button.Group>
       </SummaryBox>
       <Table
-        empty={!isLoading && sortedAddresses && t<string>('no addresses saved yet, add any existing address')}
+        empty={!isLoading && sortedAddresses && t<string>('No funds staked yet. Bond funds to validate or nominate a validator')}
         header={headerRef.current}
         withCollapsibleRows
       >
@@ -94,5 +96,21 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
 export default React.memo(styled(Overview)`
   .summary-box-contacts {
     align-items: center;
+  }
+  .customAdd{
+    color: #178FE1;
+    font-weight:500;
+  }
+  .customInput{
+    width:80rem;
+  }
+  .customInput input{
+    border: 2px solid #B1B5C4 !important;
+    border-radius: 12px;
+    background: #FFFFFF;
+    
+  }
+  .summary-box-contacts{
+    margin:0px !important;
   }
 `);

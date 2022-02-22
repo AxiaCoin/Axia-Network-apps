@@ -13,7 +13,7 @@ export default function create (t: TFunction): Route {
       needsApi: []
     },
     group: 'network',
-    icon: 'calendar-alt',
+    icon: 'calendar-week',
     name: 'calendar',
     text: t('nav.calendar', 'Event calendar', { ns: 'apps-routing' })
   };

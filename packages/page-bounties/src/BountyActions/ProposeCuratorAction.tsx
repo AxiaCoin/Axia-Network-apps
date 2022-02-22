@@ -56,7 +56,7 @@ function ProposeCuratorAction ({ description, index, proposals, value }: Props):
     ? (
       <>
         <Button
-          icon='step-forward'
+          icon='arrow-right'
           isDisabled={false}
           label={t<string>('Propose curator')}
           onClick={toggleOpen}

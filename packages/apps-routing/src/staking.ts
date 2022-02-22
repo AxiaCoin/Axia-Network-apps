@@ -15,7 +15,7 @@ export default function create (t: TFunction): Route {
       ]
     },
     group: 'network',
-    icon: 'certificate',
+    icon: 'database',
     name: 'staking',
     text: t('nav.staking', 'Staking', { ns: 'apps-routing' })
   };

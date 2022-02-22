@@ -29,7 +29,7 @@ function UpcomingEvents ({ className, scheduled, setView }: Props): React.ReactE
 
   return (
     <div className={className}>
-      <h1>
+      <h1> 
         <div>
           <Button
             className='all-events-button'

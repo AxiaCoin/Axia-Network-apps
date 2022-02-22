@@ -4,6 +4,7 @@
 import type { ComponentProps as Props } from './types';
 
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 import { Button, InputAddress, InputBalance, Modal, TxButton } from '@axia-js/react-components';
 import { useApi, useModal } from '@axia-js/react-hooks';
@@ -75,4 +76,8 @@ function SubmitCandidacy ({ electionsInfo }: Props): React.ReactElement<Props> |
   );
 }
 
-export default React.memo(SubmitCandidacy);
+export default React.memo(styled(SubmitCandidacy)`
+  // button.ui--Button{
+  //   color:red !important;
+  // }
+`);

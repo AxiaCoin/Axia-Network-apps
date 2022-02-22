@@ -5,6 +5,7 @@ import type { SubmittableExtrinsic } from '@axia-js/api/types';
 import type { TxButtonProps as Props } from './types';
 
 import React, { useCallback, useContext, useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 import { SubmittableResult } from '@axia-js/api';
 import { useIsMountedRef } from '@axia-js/react-hooks';
@@ -116,4 +117,14 @@ function TxButton ({ accountId, className = '', extrinsic: propsExtrinsic, icon,
   );
 }
 
-export default React.memo(TxButton);
+export default React.memo(styled(TxButton)`
+  &.CustomBtn{
+    background: #178FE1;
+    border-radius: 12px;
+    color:#fff;
+  }
+  // .ui--Icon{
+  //   color:#fff !important;
+  // }
+ 
+`);

@@ -105,14 +105,15 @@ export default React.memo(styled(Content)`
   width: 100%;
 
   .connecting {
-    padding: 3.5rem 0;
+    padding: 2rem 0;
   }
 
   & main > *:not(header):not(.hasOwnMaxWidth) {
     max-width: var(--width-full);
     margin-right: auto;
     margin-left: auto;
-    width: 100%;
+    width: 87%;
     padding: 0 1.5rem;
+    text-transform: capitalize;
   }
 `);

@@ -66,6 +66,7 @@ export default React.memo(styled(Output)`
   padding: 50px 10px 10px;
   position: relative;
   width: 40%;
+  
 
   .logs-wrapper {
     display: flex;

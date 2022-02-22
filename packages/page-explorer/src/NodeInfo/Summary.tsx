@@ -37,19 +37,19 @@ function Summary ({ info: { extrinsics, health, peers } = EMPTY_INFO, nextRefres
   return (
     <SummaryBox>
       <section>
-        <CardSummary label={t<string>('refresh in')}>
+        <CardSummary className='CustomBg' label={t<string>('refresh in')}>
           <Elapsed value={nextRefresh} />
         </CardSummary>
         {health && (
           <>
             <CardSummary
-              className='media--800'
+              className='media--800 CustomBg'
               label={t<string>('total peers')}
             >
               {formatNumber(health.peers)}
             </CardSummary>
             <CardSummary
-              className='media--800'
+              className='media--800 CustomBlockforks'
               label={t<string>('syncing')}
             >
               {health.isSyncing.valueOf()
@@ -73,7 +73,7 @@ function Summary ({ info: { extrinsics, health, peers } = EMPTY_INFO, nextRefres
             {formatNumber(peerBest)}
           </CardSummary>
         )}
-        <CardSummary label={t<string>('our best')}>
+        <CardSummary className='CustomBlockforks' label={t<string>('our best')}>
           <BestNumber />
         </CardSummary>
       </section>

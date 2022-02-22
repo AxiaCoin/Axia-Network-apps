@@ -385,6 +385,7 @@ function TxSigned ({ className, currentItem, requestAddress }: Props): React.Rea
                 {isSubmit && innerHash && (
                   <Modal.Columns hint={t('The call hash as calculated for this transaction')}>
                     <Output
+                      className='CustomDropdown'
                       isDisabled
                       isTrimmed
                       label={t<string>('call hash')}
@@ -400,6 +401,7 @@ function TxSigned ({ className, currentItem, requestAddress }: Props): React.Rea
       </Modal.Content>
       <Modal.Actions>
         <Button
+          className='CustomBtn'
           icon={
             flags.isQr
               ? 'qrcode'
@@ -440,7 +442,10 @@ export default React.memo(styled(TxSigned)`
     width: 100%;
     text-align: right;
   }
-
+  .CustomBtn{
+    background:#178FE1 !important;
+    color:#fff;
+  }
   .ui--Checks {
     margin-top: 0.75rem;
   }

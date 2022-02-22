@@ -228,7 +228,7 @@ function Address ({ address, className = '', filter, isFavorite, toggleFavorite 
             {isFunction(api.api.tx.balances?.transfer) && (
               <Button
                 className='send-button'
-                icon='paper-plane'
+                icon='location-arrow'
                 key='send'
                 label={t<string>('send')}
                 onClick={_toggleTransfer}

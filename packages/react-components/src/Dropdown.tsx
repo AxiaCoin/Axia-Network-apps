@@ -131,6 +131,17 @@ const Dropdown = React.memo(styled(BaseDropdown)`
   .ui--Dropdown-item {
     position: relative;
     white-space: nowrap;
+    background: red !important;
+    border: 2px solid #B1B5C4 !important;
+    border-radius: 12px;
+    
+    .drpdwn-border{
+      background: red !important;
+      border: 2px solid #B1B5C4 !important;
+      // box-sizing: border-box;
+      border-radius: 12px;
+    }
+  
 
     .ui--Dropdown-icon,
     .ui--Dropdown-name {
@@ -167,6 +178,7 @@ const Dropdown = React.memo(styled(BaseDropdown)`
       }
     }
   }
+
 `) as unknown as IDropdown<any>;
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access

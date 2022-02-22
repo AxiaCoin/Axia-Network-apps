@@ -68,11 +68,17 @@ export default React.memo(styled(Table)`
 
   table {
     border-spacing: 0;
-    max-width: 100%;
+    // max-width: 90%;
     overflow: hidden;
     position: relative;
     width: 100%;
     z-index: 1;
+    margin:auto;
+    margin-top:10px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.08);
+    border-radius: 20px;
+    
 
     &.isFixed {
       table-layout: fixed;
@@ -80,7 +86,15 @@ export default React.memo(styled(Table)`
 
     tr {
       max-width: 100%;
-      width: 100%;
+      width: 100%;  
+      
+      th {
+        font-weight:600;
+        text-transform: capitalize !important;
+        color:#000;
+        text-align:center;
+        border-bottom: 1px solid var(--border-table);
+      }
 
       td,
       &:not(.filter) th {
@@ -117,9 +131,10 @@ export default React.memo(styled(Table)`
 
   tbody {
     position: relative;
+    text-align:left;
 
     td {
-      border-bottom: 1px solid var(--border-table);
+      // border-bottom: 1px solid var(--border-table);
       padding: 0.5rem 1rem;
       text-align: left;
       vertical-align: middle;
@@ -129,7 +144,7 @@ export default React.memo(styled(Table)`
       }
 
       &:last-child {
-        border-right: 1px solid var(--border-table);
+        // border-right: 1px solid var(--border-table);
       }
 
       label {
@@ -139,7 +154,7 @@ export default React.memo(styled(Table)`
 
       div.empty {
         opacity: 0.6;
-        padding: 0.25rem;
+        padding: 1rem 0rem;
       }
 
       .ui--Spinner {
@@ -227,6 +242,7 @@ export default React.memo(styled(Table)`
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: none;
+        padding:15px;
       }
 
       &.start {
@@ -246,7 +262,7 @@ export default React.memo(styled(Table)`
       }
 
       &.mini {
-        padding: 0 !important;
+        padding: 1rem 0px !important;
         width: fit-content;
         white-space: normal;
 
@@ -273,7 +289,9 @@ export default React.memo(styled(Table)`
     tr {
       &.hasOddRowColoring,
       &:nth-child(odd) {
-        background: var(--bg-table);
+        // background: var(--bg-table);
+        background: #F8F9FA;
+        color:#23262F;
       }
 
       &:first-child {

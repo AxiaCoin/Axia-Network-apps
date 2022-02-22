@@ -90,7 +90,7 @@ export default React.memo(styled(Badge)`
   }
 
   &.blueColor {
-    background: steelblue;
+    background: #178FE1;
   }
 
   &.counterColor {
@@ -104,11 +104,11 @@ export default React.memo(styled(Badge)`
   }
 
   &.redColor {
-    background: darkred;
+    background: #F12F2F;
   }
 
   &.greenColor {
-    background: green;
+    background: #35B994;
   }
 
   &.orangeColor {
@@ -116,7 +116,7 @@ export default React.memo(styled(Badge)`
   }
 
   &.purpleColor {
-    background: indigo;
+    background: #004373;
   }
 
   &.transparentColor {

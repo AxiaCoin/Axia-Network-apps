@@ -33,7 +33,7 @@ function Grouping ({ className = '', isActive, name, routes }: Props): React.Rea
     <li className={`${className} ${isActive ? 'isActive' : ''}`}>
       <div className={`groupHdr ${!isActive ? 'highlight--color-contrast' : ''}`}>
         <span>{name}</span>
-        <Icon icon='caret-down' />
+        <Icon icon='chevron-down' className='IconSize' />
       </div>
       <ul className='groupMenu'>
         {routes.map((route): React.ReactNode => (
@@ -55,7 +55,7 @@ export default React.memo(styled(Grouping)`
     border-radius: 0.25rem;
     padding: 0.857rem 1.375rem;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.214rem;
 
     > .ui--Icon {
@@ -64,9 +64,11 @@ export default React.memo(styled(Grouping)`
   }
 
   &.isActive .groupHdr {
-    background-color: var(--bg-tabs);
+    background: #45A5E7;
+    border-radius: 8px;
+    color:#fff;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0;
   }
 
@@ -103,7 +105,7 @@ export default React.memo(styled(Grouping)`
   &:hover {
     .groupHdr {
       box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.08);
-      padding-bottom: 2rem;
+      // padding-bottom: 2rem;
       margin-bottom: -2rem;
     }
 
@@ -114,5 +116,8 @@ export default React.memo(styled(Grouping)`
         background: var(--bg-menu-hover);
       }
     }
+  }
+  .IconSize{
+    font-size:11px;
   }
 `);

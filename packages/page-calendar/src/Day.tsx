@@ -55,23 +55,26 @@ function Day ({ className, date, hasNextDay, now, scheduled, setNextDay, setPrev
 
   return (
     <div className={className}>
-      <h1>
-        <div>
+      <h1 >
+        <div className='CustomEvent'>
           <Button
-            className='all-events-button'
-            icon={'list'}
+            className='CustomBtn'
+            className='all-events-button '
+            icon={'clipboard-list'}
             onClick={_setView}
           />
-          {date.getDate()} {monthRef.current[date.getMonth()]} {date.getFullYear()} {isToday && <DayTime />}
+          <span className='CustomMonthYear'>{date.getDate()} {monthRef.current[date.getMonth()]} {date.getFullYear()} {isToday && <DayTime />}</span>
         </div>
-        <Button.Group>
+        <Button.Group className='CustomAlign'>
           <Button
-            icon='chevron-left'
-            isDisabled={isToday}
+           className=''
+            icon='arrow-left'
+            // isDisabled={isToday}
             onClick={setPrevDay}
           />
           <Button
-            icon='chevron-right'
+           className=''
+            icon='arrow-right'
             isDisabled={!hasNextDay}
             onClick={setNextDay}
           />
@@ -96,6 +99,25 @@ function Day ({ className, date, hasNextDay, now, scheduled, setNextDay, setPrev
 export default React.memo(styled(Day)`
   flex: 1;
 
+  h1{
+    align-items:center;
+    width:100%;
+  }
+
+  .CustomEvent{
+    width:50%;
+  }
+
+  .CustomAlign {
+    text-align:right;
+  }
+  
+   .ui--Button:not(.isDisabled):not(.isIcon):not(.isBasic) .ui--Icon, .ui--Button.withoutLink:not(.isDisabled) .ui--Icon{
+    background:#B1B5C4 !important;
+    border-radius:40px;
+    color:#fff;
+  }
+
   .dayHeader {
     align-items: center;
     display: flex;
@@ -106,5 +128,11 @@ export default React.memo(styled(Day)`
 
   .hoursContainer {
     z-index: 1;
+  }
+  
+   .CustomMonthYear{
+    text-transform: capitalize;
+    font-weight: 600;
+    // margin-top: -12px;
   }
 `);

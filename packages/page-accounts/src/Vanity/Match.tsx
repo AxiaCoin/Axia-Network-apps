@@ -56,13 +56,15 @@ function Match ({ address, className = '', count, offset, onCreateToggle, onRemo
       </td>
       <td className='button'>
         <Button
-          icon='plus'
+          icon='plus-square'
           label={t<string>('Save')}
           onClick={_onCreate}
+          className='CloseBtn'
         />
         <Button
           icon='times'
           onClick={_onRemove}
+          className='CloseBtn'
         />
       </td>
     </tr>
@@ -106,5 +108,15 @@ export default React.memo(styled(Match)`
   .vanity--Match-seed {
     opacity: 0.45;
     padding: 0 1rem;
+  }
+  .CloseBtn{
+    color:#178FE1 !important;
+  }
+  .CloseBtn .ui--Icon{
+    color: #777E91;
+  }
+  .ui--Button:hover:not(.isDisabled):not(.isReadOnly), .ui--Button.isSelected{
+    color:#fff !important;
+    font-weight:700;
   }
 `);

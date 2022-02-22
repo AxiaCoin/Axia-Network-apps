@@ -14,7 +14,7 @@ export default function create (t: TFunction): Route {
       needsApi: []
     },
     group: 'developer',
-    icon: 'signature',
+    icon: 'coins',
     name: 'signing',
     text: t('nav.signing', 'Sign and verify', { ns: 'apps-routing' })
   };

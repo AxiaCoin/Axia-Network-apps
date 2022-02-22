@@ -98,7 +98,7 @@ function Council ({ id, isDisabled, members }: Props): React.ReactElement<Props>
         </Modal>
       )}
       <Button
-        icon='step-forward'
+        icon='arrow-right'
         isDisabled={isDisabled}
         label={t<string>('To council')}
         onClick={toggleOpen}

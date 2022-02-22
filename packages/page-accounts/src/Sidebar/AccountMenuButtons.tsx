@@ -86,19 +86,19 @@ function AccountMenuButtons ({ className = '', flags, isEditing, isEditingName, 
         : (
           <Button.Group>
             <Button
-              icon='paper-plane'
+              icon='location-arrow'
               isDisabled={isEditing}
               label={t<string>('Send')}
               onClick={toggleIsTransferOpen}
             />
-            {!flags.isOwned && !flags.isInContacts && (
+            {/* {!flags.isOwned && !flags.isInContacts && (
               <Button
                 icon='plus'
                 isDisabled={isEditing}
                 label={t<string>('Save')}
                 onClick={_onUpdateName}
               />
-            )}
+            )} */}
             {!flags.isOwned && flags.isInContacts && (
               <Button
                 icon='ban'
@@ -130,7 +130,15 @@ export default React.memo(styled(AccountMenuButtons)`
   .ui--Button-Group {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: end;
     margin-bottom: 0;
+  }
+
+  .ui--Button.isBasic:not(.isDisabled):not(.isIcon):not(.isSelected):not(.isReadOnly){
+    background:#F4F5F6 !important;
+  }
+
+  .ui--Button.isBasic:not(.isDisabled):not(.isIcon):not(.isSelected) .ui--Icon{
+    color: #777E91 !important;
   }
 `);

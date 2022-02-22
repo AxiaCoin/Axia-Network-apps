@@ -126,7 +126,7 @@ export const styles = `
       justify-content: left;
 
       .addTags {
-        border: 1px #00000052 solid;
+        border: 2px #00000052 solid;
         border-radius: .5em;
         border-style: dashed;
         color: grey;

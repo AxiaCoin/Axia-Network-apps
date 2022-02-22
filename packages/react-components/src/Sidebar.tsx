@@ -31,8 +31,9 @@ function Sidebar ({ button, children, className = '', dataTestId = '', onClose, 
           icon='times'
           isBasic
           isCircular
-          onClick={onClose}
-        />
+          className='CloseBtn'
+          // eslint-disable-next-line react/jsx-closing-bracket-location
+          onClick={onClose} />
       </Button.Group>
       {children}
     </div>
@@ -58,5 +59,20 @@ export default React.memo(styled(Sidebar)(({ offset = 0, position }: Props) => `
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
+    // left:1.5rem;
   }
+  .CloseBtn{
+    // padding:0.8rem 1rem;
+    height:48px;
+    width:48px;
+    background: #fff;
+    
+  }
+    .ui--Button.isBasic:not(.isDisabled):not(.isIcon):not(.isSelected):not(.isReadOnly){
+    box-shadow:none !important;
+  }
+  .ui--Button.isBasic:not(.isDisabled):not(.isIcon):not(.isSelected) .ui--Icon{
+    color:#777E91 !important;
+  }
+
 `));

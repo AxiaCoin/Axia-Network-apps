@@ -6,7 +6,6 @@ import type { OverrideBundleDefinition } from '@axia-js/types';
 import chainx from './chainx';
 import axccanarynet from './axccanarynet';
 
-import pontem from './pontem';
 import axctestnet from './axctestnet';
 
 // NOTE: The mapping is done from specName in state.getRuntimeVersion
@@ -18,10 +17,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'axccanarynet-node': axccanarynet,
 
   axctestnet,
-  'axctestnet-node': axctestnet,
-
-  pontem,
-  'pontem-node': pontem,
+  'axctestnet-node': axctestnet
 };
 
 export default spec;
